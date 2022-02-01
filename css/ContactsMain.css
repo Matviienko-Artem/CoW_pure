@@ -1,0 +1,37 @@
+.сontacts-main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px;
+  width: 100%;
+  padding: 50px 30px;
+  background-color: #d9d9d1;
+
+  color: #ffffff;
+}
+
+.сontacts-main-section .address-block {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.write-us-block {
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .сontacts-main-section {
+    flex-direction: row;
+  }
+
+  .сontacts-main-section .address-block {
+    width: 50%;
+    margin-bottom: 0;
+    margin-right: 35px;
+    max-width: 500px;
+  }
+
+  .сontacts-main-section .write-us-block {
+    width: 50%;
+    max-width: 850px;
+  }
+}

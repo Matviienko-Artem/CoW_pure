@@ -1,0 +1,92 @@
+.write-us-section {
+  width: 100%;
+
+  min-height: 400px;
+  padding: 30px;
+  background-color: #332e4c;
+
+  text-transform: uppercase;
+}
+
+.write-us-section h2 {
+  margin-top: 0;
+  font-family: "Cormorant", serif;
+
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.write-us-section input,
+.write-us-section textarea {
+  padding: 10px 10px 10px 0;
+  outline: none;
+  background-color: #332e4c;
+  border: none;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 30px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+}
+.write-us-section input {
+  width: 100%;
+}
+.write-us-section textarea {
+  width: 100%;
+  max-width: 100%;
+  min-height: 80px;
+  max-height: 150px;
+  padding: 10px;
+  border: 1px solid #fff;
+}
+
+.write-us-section input::placeholder,
+.write-us-section textarea::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.write-us-section .feedback-name,
+.write-us-section .feedback-question {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+
+#feedback-submit-button {
+  display: block;
+  margin-left: auto;
+  height: 35px;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+
+  text-transform: uppercase;
+  color: #fff;
+}
+#feedback-submit-button span {
+  margin-left: 10px;
+}
+
+#feedback-submit-button span b {
+  font-size: 16px;
+}
+
+@media (min-width: 1024px) {
+  .write-us-section input {
+    width: 48%;
+  }
+}

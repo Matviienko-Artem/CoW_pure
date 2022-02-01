@@ -1,0 +1,78 @@
+.address-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 400px;
+  height: 100%;
+  padding: 30px;
+
+  background-color: #332e4c;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  text-transform: uppercase;
+}
+.address-section .our-address-link {
+  display: flex;
+  justify-content: space-between;
+}
+.address-section .contacts-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.address-section .contacts-icon .icon-circle {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #332e4c;
+  border-radius: 50%;
+}
+
+.address-section h4 {
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  font-weight: normal;
+}
+
+.address-section a {
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 500ms ease;
+}
+
+.our-address-link a:hover,
+.our-address-link a:focus {
+  transform: scale(1.1);
+}
+
+.address-section p {
+  text-transform: capitalize;
+}
+.address-section h2 {
+  width: 60%;
+  margin-top: auto;
+  margin-bottom: 0;
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.22;
+}
+
+@media (min-width: 1024px) {
+}

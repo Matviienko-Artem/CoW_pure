@@ -1,0 +1,212 @@
+#single-teacher_page {
+  color: #fff;
+  min-height: 500px;
+}
+
+#single-teacher_page .teachers-themes .birthday {
+  text-transform: uppercase;
+}
+
+#single-teacher_page .teachers-themes ul li {
+  position: relative;
+}
+
+#single-teacher_page .teachers-themes ul li::before {
+  content: "\25C6";
+  position: absolute;
+  left: -15px;
+  color: #fff;
+}
+
+#single-teacher_page .teachers-themes ul {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 55px;
+  transition: max-height 500ms ease;
+}
+
+#single-teacher_page .teachers-themes ul.open {
+  max-height: 500px;
+}
+
+#single-teacher_page .teachers-themes ul p {
+  margin-left: 10px;
+}
+
+#single-teacher_page .teachers-themes .read-more {
+  display: none;
+  height: 50px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  width: 100%;
+
+  text-align: center;
+}
+
+#single-teacher_page .teachers-themes .read-more p {
+  margin: 0;
+}
+
+#single-teacher_page .teachers-themes .read-more p::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 10px;
+  margin-left: 5px;
+
+  background-image: url("../images/arrow_down.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 500ms ease;
+}
+
+#single-teacher_page .teachers-themes .read-more p.rotate::after {
+  transform: rotateZ(180deg);
+}
+
+#single-teacher_page .objective-slider {
+  background-color: #332e4c;
+  color: #fff;
+  width: 100%;
+  height: 420px;
+  max-height: 420px;
+}
+
+#single-teacher_page .objective-slider-item {
+  align-items: flex-start;
+  padding: 130px 20px 0 20px;
+}
+
+#single-teacher_page .objective-slider-item .based-on {
+  position: relative;
+  width: 100%;
+}
+#single-teacher_page .objective-slider-item .based-on::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: -10px;
+  display: block;
+  height: 185px;
+  width: 1px;
+  border-right: 1px solid #fff;
+}
+
+#single-teacher_page .objective-slider-item .based-on p {
+  margin: 15px 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: lowercase;
+}
+
+#single-teacher_page .objective-slider .slick-dots li button:before {
+  color: #fff;
+}
+
+.conditions-consultations {
+  margin-left: 30px;
+  padding: 2px 0;
+  position: relative;
+  margin-top: 15px;
+  max-width: max-content;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+
+.conditions-consultations::before {
+  content: "?";
+
+  position: absolute;
+  left: -30px;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  border-radius: 50%;
+  border: 1px solid #000;
+  transition: opacity 500ms ease;
+}
+.conditions-consultations:after {
+  opacity: 0;
+  content: attr(data-title);
+  padding: 15px;
+  position: absolute;
+  left: 20%;
+  top: 150%;
+  width: 150%;
+  z-index: 1;
+  background: #fff;
+
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: lowercase;
+  border: 1px solid #d9d9d1;
+  transition: opacity 500ms ease;
+}
+.conditions-consultations:hover:after,
+.conditions-consultations:focus:after {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  /* #single-teacher_page .objective-slider-item .based-on::after {
+    display: none;
+  } */
+
+  #single-teacher_page
+    .teachers-themes
+    .about-teacher-heading
+    .person-icon
+    circle {
+    fill: #b8c3cb;
+    stroke: #fff;
+  }
+  #single-teacher_page
+    .teachers-themes
+    .about-teacher-heading
+    .person-icon
+    path {
+    fill: #fff;
+  }
+  #single-teacher_page
+    .teachers-themes
+    .about-teacher-heading.second
+    .person-icon
+    circle {
+    fill: #d9d9d1;
+    stroke: #fff;
+  }
+  #single-teacher_page
+    .teachers-themes
+    .about-teacher-heading.second
+    .person-icon
+    path {
+    fill: #fff;
+  }
+  #single-teacher_page .teachers-themes ul {
+    max-height: 95px;
+    overflow: hidden;
+  }
+  #single-teacher_page .teachers-themes ul li::before {
+    color: #b8c3cb;
+  }
+  #single-teacher_page .teachers-themes .read-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

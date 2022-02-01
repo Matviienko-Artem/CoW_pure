@@ -1,0 +1,38 @@
+@keyframes runLines {
+  0% {
+    stroke-dashoffset: -1965.46;
+    stroke-dasharray: 0px, 1975.46px;
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 1975.46px, 1975.46px;
+  }
+}
+.delimiter {
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.delimiter.header {
+  position: absolute;
+}
+
+.delimiter svg {
+  position: absolute;
+  top: -400px;
+  width: 100%;
+}
+
+.delimiter svg path {
+  animation-name: runLines;
+  animation-duration: 5000ms;
+}
+
+@media (max-width: 1024px) {
+  .delimiter {
+    display: none;
+  }
+}

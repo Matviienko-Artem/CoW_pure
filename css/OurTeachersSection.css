@@ -1,0 +1,269 @@
+.our-teachers-section {
+  display: flex;
+  align-items: center;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1.16;
+  letter-spacing: 0.1em;
+
+  color: #1f1f1f;
+  min-height: 630px;
+  background-image: linear-gradient(to right, #b8c3cb 85%, #fff 15%);
+}
+
+.our-teachers-section.second {
+  background-image: linear-gradient(to left, #d9d9d1 85%, #fff 15%);
+}
+
+.our-teachers-section .teachers-themes {
+  width: 100%;
+  padding: 100px 50px 50px 50px;
+}
+
+.our-teachers-section .teachers-themes.second {
+  order: 2;
+}
+
+.our-teachers-section .teachers-themes h2 {
+  margin: 20px 0;
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.22;
+  letter-spacing: 0.03em;
+}
+.our-teachers-section .teachers-themes h2 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.our-teachers-section .teachers-themes h4,
+.our-teachers-section .teachers-themes h5 {
+  position: relative;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.our-teachers-section .teachers-themes h4 {
+  margin-bottom: 40px;
+}
+.our-teachers-section .teachers-themes h5,
+.our-teachers-section .teachers-themes p,
+.our-teachers-section .teachers-themes .detail-button {
+  margin-left: 65px;
+  margin-bottom: 20px;
+}
+.teachers-themes .about-teacher-heading {
+  position: relative;
+}
+.teachers-themes .about-teacher-heading .person-icon {
+  position: absolute;
+  top: 0;
+  transform: translateY(-20px);
+}
+
+.our-teachers-section .teachers-themes p {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: lowercase;
+}
+
+.our-teachers-section .teachers-themes .detail-button {
+  color: #1f1f1f;
+}
+
+.our-teachers-section .teachers-consultations {
+  width: 100%;
+}
+
+.our-teachers-section .teachers-consultations.second {
+  padding: 40px;
+  order: 3;
+}
+
+.our-teachers-section .teachers-consultations select {
+  padding: 15px 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #1f1f1f;
+  background-color: #b8c3cb;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.our-teachers-section .teachers-consultations.second select {
+  background-color: #d9d9d1;
+}
+
+.our-teachers-section .teachers-consultations h5 {
+  position: relative;
+  font-size: 14px;
+  margin-left: 23px;
+}
+.our-teachers-section .teachers-consultations h5::before {
+  content: "";
+  position: absolute;
+  transform: translate(-130%, -10%);
+  display: block;
+  width: 18px;
+  height: 18px;
+  background-image: url("../images/clock.svg");
+  background-repeat: no-repeat;
+}
+
+.our-teachers-section .teachers-consultations p {
+  margin: 20px 0;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.our-teachers-section .teachers-consultations .price-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+}
+.our-teachers-section .teachers-consultations .price-container p {
+  margin: 0;
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.5;
+  color: #1f1f1f;
+}
+.price-container p span {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.price-container .cart-icon {
+  width: 35px;
+  height: 35px;
+  padding: 7px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.price-container .cart-icon:hover,
+.price-container .cart-icon:focus {
+  background-color: #332e4c;
+}
+
+.price-container .cart-icon:hover path {
+  fill: #fff;
+}
+
+.our-teachers-section .teachers-photo {
+  height: 630px;
+  width: 100%;
+  padding: 0 10px;
+  background-repeat: no-repeat;
+}
+
+.our-teachers-section .teachers-photo.lubanova {
+  background-image: url("../images/lubanova_tatiana.jpg");
+  background-position: center right 60px;
+}
+
+.our-teachers-section .teachers-photo.milovidova {
+  order: 1;
+  background-image: url("../images/milovidova_natalia.jpg");
+  background-position: center left 60px;
+}
+
+@media (max-width: 1024px) {
+  .our-teachers-section {
+    flex-direction: column;
+    background-image: linear-gradient(to top, #fff 60%, #b8c3cb 40%);
+  }
+  .our-teachers-section.second {
+    background-image: linear-gradient(to top, #fff 60%, #d9d9d1 40%);
+  }
+  .our-teachers-section .teachers-photo.lubanova {
+    background-position: center;
+    order: 1;
+  }
+  .our-teachers-section .teachers-themes {
+    padding: 10px;
+    order: 2;
+  }
+  .our-teachers-section .teachers-consultations {
+    padding: 40px 10px;
+    order: 3;
+  }
+
+  .our-teachers-section .teachers-consultations.second {
+    padding: 40px 10px;
+  }
+
+  .our-teachers-section .teachers-themes .person-icon circle {
+    fill: #b8c3cb;
+    stroke: #fff;
+  }
+  .our-teachers-section .teachers-themes .person-icon line {
+    stroke: #fff;
+  }
+
+  .our-teachers-section
+    .teachers-themes
+    .about-teacher-heading.second
+    .person-icon
+    circle {
+    fill: #d9d9d1;
+  }
+
+  .our-teachers-section .teachers-consultations select,
+  .our-teachers-section .teachers-consultations.second select {
+    background-color: #fff;
+  }
+
+  .our-teachers-section .teachers-consultations .price-container {
+    border-bottom: 1px solid #b8c3cb;
+  }
+
+  .our-teachers-section .teachers-consultations.second .price-container {
+    border-bottom: 1px solid #d9d9d1;
+  }
+
+  .price-container .cart-icon {
+    width: 65px;
+    height: 65px;
+    padding: 7px;
+    border: 1px solid #b8c3cb;
+    background-color: #b8c3cb;
+  }
+  .price-container .cart-icon:hover {
+    border: 1px solid #b8c3cb;
+    background-color: #fff;
+  }
+  .price-container .cart-icon path {
+    fill: #fff;
+  }
+  .price-container .cart-icon:hover path {
+    fill: #b8c3cb;
+  }
+
+  .price-container.second .cart-icon {
+    width: 65px;
+    height: 65px;
+    padding: 7px;
+    border: 1px solid #d9d9d1;
+    background-color: #d9d9d1;
+  }
+  .price-container.second .cart-icon:hover {
+    border: 1px solid #d9d9d1;
+    background-color: #fff;
+  }
+  .price-container.second .cart-icon path {
+    fill: #fff;
+  }
+  .price-container.second .cart-icon:hover path {
+    fill: #d9d9d1;
+  }
+}

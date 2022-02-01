@@ -1,0 +1,121 @@
+.services-section .container_for_slider {
+  background: #332e4c;
+}
+.services-section .services_slider_item {
+  padding: 30px;
+}
+
+.services-section .back-wrapper {
+  position: relative;
+
+  min-height: 626px;
+  background-size: cover;
+}
+
+.services-section .first-wrap {
+  background-image: url("../images/wrap1.png");
+}
+.services-section .second-wrap {
+  background-image: url("../images/wrap2.png");
+}
+
+.services-section .third-wrap {
+  background-image: url("../images/wrap3.png");
+}
+
+.services-section .item-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(51, 46, 76, 0.8);
+
+  /* z-index: 2; */
+}
+
+.services-section .content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-height: 347px;
+  min-width: 280px;
+  padding: 50px 15px;
+  background: rgba(255, 255, 255, 0.9);
+
+  z-index: 3;
+}
+
+.services-section .content-container .item-count {
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.services-section .item-count .count-circle {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #332e4c;
+  border-radius: 50%;
+}
+
+.services-section .content-container h2 {
+  margin: 0;
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #332e4c;
+}
+
+.services-section .content-container h4 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: lowercase;
+  color: #332e4c;
+}
+
+.services-section .content-container a {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #332e4c;
+}
+
+.services-section .content-container a span {
+  margin-left: 10px;
+}
+
+.services-section .content-container a span b {
+  font-weight: normal;
+  font-size: 16px;
+}

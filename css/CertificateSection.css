@@ -1,0 +1,105 @@
+.certificate-section {
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding: 50px 0;
+  background-color: #d9d9d1;
+}
+
+.certificate-section .article_slider_item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 560px;
+}
+
+.certificate-section .article-photo {
+  min-width: 320px;
+  width: 100%;
+  height: 400px;
+  background-image: url("../images/certificate.jpg");
+  background-color: #d9d9d1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.certificate-section .slick-slide .article_slider_item {
+  opacity: 0.7;
+  transform: scale(0.7);
+  z-index: 3;
+  transition: scale 1000ms ease;
+}
+
+.certificate-section .slick-center .article_slider_item {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 4;
+  transition: transform 1000ms ease;
+}
+
+.certificate-section button.slick-prev {
+  top: 30%;
+}
+.certificate-section button.slick-next {
+  top: 30%;
+}
+
+.certificate-section .slick-dots {
+  width: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.certificate-section .slick-dots li button {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 2px;
+  opacity: 0.8;
+  background-color: #332e4c;
+}
+
+.certificate-section li.slick-active button {
+  transform: scaleY(2.5);
+  opacity: 1;
+}
+
+.certificate-section .slick-dots li button::before {
+  width: 0;
+  height: 0;
+  font-size: 0;
+}
+
+.certificate-section .slick-dots li {
+  width: 20%;
+  height: auto;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .certificate-section {
+  }
+  .certificate-section .article-photo {
+    width: 900px;
+    height: 560px;
+  }
+  .certificate-section .article_slider_item {
+    padding: 50px;
+  }
+  .certificate-section .content-container {
+    width: 353px;
+    height: 292px;
+
+    top: 30%;
+    right: -80px;
+
+    text-align: left;
+  }
+
+  .certificate-section button.slick-prev {
+    display: none !important;
+  }
+  .certificate-section button.slick-next {
+    display: none !important;
+  }
+}

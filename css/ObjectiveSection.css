@@ -1,0 +1,128 @@
+.objective-section {
+  padding: 85px 40px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  background-color: #fff;
+  background-image: url("../images/pexels.png");
+  background-repeat: no-repeat;
+  background-position: left;
+  min-height: 800px;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.objective-slider {
+  position: relative;
+  width: 480px;
+  height: 385px;
+  max-height: 385px;
+  min-width: 200px;
+  background-color: #b8c3cb;
+  color: #332e4c;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.objective-slider h4 {
+  position: absolute;
+  left: 50%;
+  top: 30px;
+  transform: translate(-50%, 0);
+}
+
+.objective-slider-item {
+  padding: 40px;
+  height: 385px;
+  display: flex;
+  align-items: center;
+}
+.objective-slider-item .based-on {
+  width: 50%;
+}
+
+.objective-slider .slick-dots {
+  bottom: 40px;
+}
+.objective-slider .slick-dots li {
+  margin: 0;
+}
+.objective-slider .slick-dots li button:before {
+  color: #332e4c;
+  content: "\25C6";
+  font-size: 14px;
+}
+.objective-slider .slick-dots li.slick-active button:before {
+  font-size: 18px;
+}
+
+.objective-container {
+  height: 385px;
+  width: 50%;
+  padding: 40px;
+  color: #fff;
+  background-color: #332e4c;
+}
+.objective-container h2 {
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.objective-container ul {
+  list-style: none;
+  padding-left: 20px;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: lowercase;
+}
+.objective-container ul li {
+  margin-top: 10px;
+  position: relative;
+}
+.objective-container ul li::before {
+  content: "\25C6";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.objective-container p {
+  padding-left: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+@media (max-width: 1024px) {
+  .objective-section {
+    flex-direction: column;
+    padding-top: 600px;
+    padding-bottom: 0;
+    background-position: top;
+  }
+
+  .objective-container,
+  .objective-slider {
+    width: 100%;
+    height: auto;
+  }
+  .objective-container h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .objective-container ul {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}

@@ -1,0 +1,162 @@
+.school-history-section {
+  padding: 100px 0;
+
+  background-color: #fff;
+
+  min-height: 380px;
+}
+
+.school-history-section h4 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #1f1f1f;
+}
+
+.school-history-section h2 {
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1f1f1f;
+}
+
+.school-history-section .slide-container {
+  /* width: 200px; */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.school-history-section .slide-container.once {
+  margin-top: 180px;
+}
+
+.school-history-section .circle-container {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: #332e4c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.school-history-section .circle-container.left::before {
+  content: "------------------------";
+  color: #332e4c;
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+}
+.school-history-section .circle-container.left_special::before {
+  content: "\25C6  ----------------------";
+  color: #332e4c;
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+}
+.school-history-section .circle-container.right::after {
+  content: "---------------------- \25C6";
+  color: #332e4c;
+  position: absolute;
+  right: 0;
+  transform: translateX(100%);
+}
+.school-history-section .circle-container.diagonal::after {
+  content: "------------------------";
+  color: #332e4c;
+  position: absolute;
+  bottom: -30%;
+  right: -90%;
+  transform: rotateZ(40deg);
+}
+.school-history-section .circle-container.diagonal_sec::after {
+  content: "------------------------";
+  color: #332e4c;
+  position: absolute;
+  top: -20%;
+  right: -90%;
+  transform: rotateZ(-40deg);
+}
+.school-history-section .circle-border {
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 1px dashed #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+.school-history-section .circle-border.column {
+  flex-direction: column;
+}
+.school-history-section .circle-border h5 {
+  margin: 0;
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.school-history-section .slide-container h5.bigger {
+  font-size: 72px;
+  padding-bottom: 20px;
+}
+
+.school-history-section .slide-container h4 {
+  margin: 20px 0;
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1f1f1f;
+}
+
+.school-history-section .slide-container p.spec_width {
+  padding: 0px 120px;
+}
+
+.school-history-section .slide-container p {
+  padding: 0px 30px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: lowercase;
+  color: #1f1f1f;
+}
+.school-history-section .historySwiper {
+  margin-top: 30px;
+}
+@media (max-width: 1024px) {
+  .school-history-section .circle-container.left::before {
+    content: "--------------------";
+  }
+  .school-history-section .circle-container.right::after {
+    content: "------------------ \25C6";
+  }
+
+  .school-history-section .circle-container.left_special::before {
+    content: "\25C6  -------------------";
+  }
+}

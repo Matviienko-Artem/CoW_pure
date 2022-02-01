@@ -1,0 +1,329 @@
+:root {
+  --black-color: #000;
+  --white-color: #fff;
+  --gray-color: #bab9b9;
+  --section-border-color: rgba(186, 185, 185, 0.49);
+  --section-1-color: #95bc00;
+  --section-2-color: #f34e4e;
+  --section-3-color: #ffd745;
+  --section-4-color: #008fc0;
+  --cubic-animation: cubic-bezier(0.52, 0.19, 0.14, 0.96);
+}
+
+#root {
+  width: 100%;
+}
+
+.hero {
+  height: 100vh;
+  position: relative;
+  padding-top: 55px;
+  overflow: hidden;
+  background: #332e4c;
+}
+
+#heroVideo {
+  position: absolute;
+  top: -2500px;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.4;
+}
+
+.hero .container_for_slider {
+  padding: 10px;
+  background: #332e4c;
+}
+
+button.slick-prev:before,
+button.slick-next:before {
+  content: "";
+}
+
+button.slick-prev,
+button.slick-next {
+  width: 55px;
+  height: 55px;
+  z-index: 5;
+
+  background-image: url("./data/left_arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: all 200ms linear;
+  transform: translate(0, 50%);
+}
+
+button.slick-prev {
+  left: 0;
+}
+
+button.slick-prev:hover,
+button.slick-prev:focus {
+  background-image: url("./data/left_arrow.svg");
+  background-repeat: no-repeat;
+}
+
+button.slick-next {
+  right: 0;
+  background-image: url("./data/right_arrow.svg");
+}
+
+button.slick-next:hover,
+button.slick-next:focus {
+  background-image: url("./data/right_arrow.svg");
+  background-repeat: no-repeat;
+}
+
+.slide-count {
+  display: none;
+  position: absolute;
+  top: 140px;
+  left: 40px;
+  color: #fff;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 1.18;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.slide-count .current {
+  font-family: "Cormorant", serif;
+  font-size: 30px;
+  line-height: 1.33;
+  font-weight: 400;
+}
+
+.container_for_slider .slick-dots {
+  bottom: 0;
+}
+
+.container_for_slider .slick-dots li.slick-active button:before,
+.container_for_slider .slick-dots li button:before {
+  color: #fff;
+}
+
+.hero.hero_slider_item {
+  padding: 10px;
+
+  /* тут можно задать высоту елемента слайдера */
+}
+
+.hero_slider_item h2,
+.hero_slider_item h4 {
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+.hero_slider_item h2 {
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.22;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.hero_slider_item h4 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.hero_cart_container {
+  position: relative;
+  min-width: 252px;
+  min-height: 76px;
+  padding: 20px;
+  border: 1px solid #fff;
+  background: rgba(255, 255, 255, 0.5);
+
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 11px;
+  line-height: 13px;
+}
+
+.hero_cart_container h4 {
+  width: calc(100% - 74px);
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: left;
+  color: #fff;
+}
+
+.hero-cart-list {
+  display: none;
+  font-size: 11px;
+  color: #fff;
+  padding-left: 5px;
+  border-top: 1px solid #fff;
+  list-style-type: square;
+}
+
+.hero-cart-list li {
+  margin: 10px;
+}
+
+.hero_cart_container .cart-icon {
+  position: absolute;
+  padding: 10px;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 74px;
+  height: 74px;
+  background-color: #fff;
+  cursor: pointer;
+
+  transition: all 500ms ease;
+}
+.hero_cart_container .cart-icon path {
+  transition: all 500ms ease;
+}
+.hero_cart_container .cart-icon:hover,
+.hero_cart_container .cart-icon:focus {
+  background-color: #332e4c;
+}
+.hero_cart_container .cart-icon:hover path,
+.hero_cart_container .cart-icon:focus path {
+  fill: #fff;
+}
+
+.slider_image {
+  min-width: 252px;
+  min-height: 300px;
+  background-image: url("../images/image_1_slider.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: -50px;
+}
+
+/* -------------------------------------- адаптив на странице */
+@media (min-width: 1024px) {
+  .hero_slider_item {
+    padding-left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  .hero-item-heading {
+    width: 40%;
+  }
+  .hero_cart_container {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(0, -50%);
+    width: 243px;
+    height: 243px;
+  }
+
+  .hero_cart_container .cart-icon {
+    top: auto;
+    bottom: 0;
+    border: 1px solid #fff;
+  }
+
+  .hero_slider_item h2,
+  .hero_slider_item h4 {
+    width: 100%;
+    text-align: left;
+    margin-top: 0;
+  }
+  .hero_slider_item .hero-item-heading h4 {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.2em;
+  }
+
+  .hero_slider_item h2 {
+    font-size: 48px;
+  }
+
+  .hero-cart-list {
+    display: block;
+  }
+
+  .slider_image {
+    min-width: 50%;
+    min-height: 700px;
+
+    background-size: contain;
+    background-position-y: 0;
+  }
+  .hero_cart_container .cart-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .hero_cart_container .cart-icon svg {
+    width: 31px;
+  }
+
+  .hero button.slick-prev {
+    width: 15px;
+    height: 15px;
+    left: 240px;
+    top: 117px;
+    background-image: url("./data/white-arrow.svg");
+    background-size: contain;
+    background-position: center;
+    transform: rotate(180deg);
+  }
+  .hero button.slick-next {
+    width: 15px;
+    height: 15px;
+    left: 260px;
+    top: 117px;
+    background-image: url("./data/white-arrow.svg");
+    background-size: contain;
+    background-position: center;
+    transform: none;
+  }
+
+  .hero .container_for_slider .slick-dots {
+    width: 200px;
+    top: 110px;
+    left: 30px;
+  }
+  .hero .slick-dots li {
+    width: 33.3%;
+    height: auto;
+    margin: 0;
+  }
+  .hero .slick-dots button {
+    width: 100%;
+    background: #fff;
+    padding: 0;
+    height: 2px;
+    opacity: 0.8;
+  }
+  .hero .slick-dots button::before {
+    content: none;
+  }
+
+  .hero li.slick-active button {
+    transform: scaleY(2.5);
+    opacity: 1;
+  }
+
+  .slide-count {
+    display: block;
+  }
+}

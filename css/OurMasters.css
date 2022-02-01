@@ -1,0 +1,114 @@
+.our-masters-section .container_for_slider {
+  background-image: linear-gradient(to top, #d9d9d1 50%, #fff 50%);
+  text-align: center;
+}
+
+.our-masters-section .container_for_slider h4 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+  text-align: center;
+}
+.our-masters-section .container_for_slider h2 {
+  margin: 20px 0;
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.22;
+  letter-spacing: 0.03em;
+
+  color: #1f1f1f;
+}
+
+.our-masters-section .master-photo {
+  width: 100%;
+  min-height: 424px;
+  background-size: cover;
+}
+
+.our-masters-section .master-photo.first-photo {
+  background-image: url("../images/lubanova_tatiana.jpg");
+}
+
+.our-masters-section .master-photo.second-photo {
+  background-image: url("../images/milovidova_natalia.jpg");
+}
+.our-masters-section .slick-slider button {
+  display: none !important;
+}
+
+@media (min-width: 1024px) {
+  .our-masters-section .first-container {
+    margin-left: auto;
+  }
+}
+
+.our-masters-section .content-container {
+  min-height: 347px;
+  max-width: 330px;
+  padding: 50px 15px;
+}
+@media (max-width: 1024px) {
+  .our-masters-section .content-container {
+    margin: auto;
+  }
+}
+
+.our-masters-section .content-container h2 {
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.2;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #1f1f1f;
+}
+
+.our-masters-section .content-container h4 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  color: #1f1f1f;
+}
+
+.our-masters-section .content-container .detail-button {
+  color: #1f1f1f;
+}
+
+.detail-button {
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.detail-button:hover span {
+  transform: translateX(50%);
+}
+
+.detail-button span {
+  display: inline-block;
+  margin-left: 10px;
+  transition: transform 500ms ease;
+}
+
+.detail-button span b {
+  font-weight: normal;
+  font-size: 16px;
+}

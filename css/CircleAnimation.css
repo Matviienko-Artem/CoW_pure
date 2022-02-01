@@ -1,0 +1,104 @@
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anticlockwiseSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#circle-animation {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+
+  width: 40vw;
+  height: 40vw;
+  max-width: 560px;
+  max-height: 560px;
+  transform: translate(50%, 50%);
+
+  z-index: 3;
+}
+#circle-animation .scale-box {
+  width: 100%;
+  height: 100%;
+  animation-name: scale;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#circle-animation .circle {
+  width: 100%;
+  height: 100%;
+  border: 1px dashed #fff;
+  border-radius: 50%;
+
+  animation-name: spin;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#circle-animation .inner-box {
+  width: 70%;
+  height: 70%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#circle-animation .anticlockwise {
+  animation-name: anticlockwiseSpin;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#circle-animation .text {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 1024px) {
+  #circle-animation {
+    width: 70vw;
+    height: 70vw;
+  }
+}

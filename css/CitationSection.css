@@ -1,0 +1,71 @@
+.citation-section {
+  padding: 50px 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #b8c3cb;
+  background-image: url("../images/coma.png");
+  background-repeat: no-repeat;
+  background-position: left 20% center;
+
+  min-height: 380px;
+}
+
+.citation-section .icon-container {
+  position: absolute;
+  top: 0;
+  transform: translate(0, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  background-color: #332e4c;
+  border-radius: 50%;
+}
+.citation-section .icon-container .icon-dashed {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 1px dashed #fff;
+}
+.citation-section .icon-container svg {
+  width: 80%;
+  height: 80%;
+}
+
+.citation-section p {
+  max-width: 800px;
+
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.83;
+  color: #1f1f1f;
+
+  text-align: center;
+}
+
+.citation-section h4 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+@media (max-width: 1024px) {
+  .citation-section .icon-container {
+    width: 80px;
+    height: 80px;
+  }
+}

@@ -1,0 +1,21 @@
+#about_school_page {
+  padding-top: 55px;
+  color: #fff;
+  background-color: #d9d9d1;
+
+  min-height: 500px;
+}
+
+#about_school_page .our-masters-section .container_for_slider {
+  padding-top: 50px;
+  background-image: linear-gradient(to top, #332e4c 50%, #fff 50%);
+}
+
+#about_school_page .our-masters-section .content-container h2,
+#about_school_page .our-masters-section .content-container h4,
+#about_school_page .our-masters-section .content-container a {
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+}
