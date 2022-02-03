@@ -1,14 +1,12 @@
 .services-section .container_for_slider {
   background: #332e4c;
 }
-.services-section .services_slider_item {
-  padding: 30px;
-}
 
 .services-section .back-wrapper {
   position: relative;
-
-  min-height: 626px;
+  min-height: 455px;
+  max-width: 410px;
+  margin: 0 auto;
   background-size: cover;
 }
 
@@ -41,7 +39,7 @@
   transform: translate(-50%, -50%);
 
   min-height: 347px;
-  min-width: 280px;
+  min-width: 283px;
   padding: 50px 15px;
   background: rgba(255, 255, 255, 0.9);
 
@@ -62,13 +60,20 @@
   border-radius: 50%;
 }
 .services-section .item-count .count-circle {
-  height: 80%;
-  width: 80%;
+  height: 43px;
+  width: 43px;
+  padding-bottom: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px dashed #332e4c;
   border-radius: 50%;
+
+  font-family: "Cormorant", serif;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1;
+  color: #332e4c;
 }
 
 .services-section .content-container h2 {
@@ -86,6 +91,7 @@
 }
 
 .services-section .content-container h4 {
+  margin-top: 50px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -98,7 +104,7 @@
 
 .services-section .content-container a {
   position: absolute;
-  bottom: 30px;
+  bottom: 50px;
   left: 50%;
   transform: translate(-50%, 0);
 
@@ -118,4 +124,14 @@
 .services-section .content-container a span b {
   font-weight: normal;
   font-size: 16px;
+}
+
+.swiper.servicesSwiper {
+  padding: 60px 0 100px 0 !important;
+}
+
+@media (min-width: 1024px) {
+  .services-section .services_slider_item {
+    padding: 0 10px;
+  }
 }

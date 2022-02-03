@@ -10,20 +10,20 @@
 @media (min-width: 1024px) {
   .our-school-section {
     display: flex;
-    justify-content: center;
+
     min-height: 555px;
-    background-image: linear-gradient(to bottom, #b8c3cb 70%, #fff 30%);
+    background-image: linear-gradient(to bottom, #b8c3cb 80%, #fff 20%);
   }
 }
 
 .our-school-section .our-school-image {
   margin-left: auto;
   margin-right: auto;
-  width: 352px;
-  min-height: 389px;
-  background-image: url("../images/our_school_img_small.png");
+  width: 464px;
+  min-height: 464px;
+  /* background-image: url("../images/our_school_img_small.png");
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 }
 
 @media (min-width: 1024px) {
@@ -68,8 +68,8 @@
   z-index: 2;
 }
 .our-school-section .accordeon-btn .count-circle {
-  height: 80%;
-  width: 80%;
+  height: 43px;
+  width: 43px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +78,6 @@
 }
 
 .our-school-section .accordeon-btn .count-circle span {
-  margin-bottom: 5px;
   font-size: 20px;
   line-height: 1;
   color: #fff;
