@@ -1,5 +1,4 @@
 .our-masters-section .container_for_slider {
-  background-image: linear-gradient(to top, #d9d9d1 50%, #fff 50%);
   text-align: center;
 }
 
@@ -28,39 +27,31 @@
 
 .our-masters-section .master-photo {
   width: 100%;
-  min-height: 424px;
-  background-size: cover;
-}
-
-.our-masters-section .master-photo.first-photo {
-  background-image: url("../images/lubanova_tatiana.jpg");
-}
-
-.our-masters-section .master-photo.second-photo {
-  background-image: url("../images/milovidova_natalia.jpg");
-}
-.our-masters-section .slick-slider button {
-  display: none !important;
 }
 
 @media (min-width: 1024px) {
   .our-masters-section .first-container {
     margin-left: auto;
   }
+  .our-masters-section .container_for_slider {
+    background-image: linear-gradient(to top, #d9d9d1 50%, #fff 50%);
+  }
 }
 
 .our-masters-section .content-container {
   min-height: 347px;
-  max-width: 330px;
-  padding: 50px 15px;
+  max-width: 400px;
+  padding: 50px 30px;
 }
 @media (max-width: 1024px) {
   .our-masters-section .content-container {
+    padding-top: 0;
     margin: auto;
   }
 }
 
 .our-masters-section .content-container h2 {
+  margin-bottom: 10px;
   font-family: "Cormorant", serif;
   font-style: normal;
   font-weight: bold;
@@ -74,6 +65,8 @@
 }
 
 .our-masters-section .content-container h4 {
+  padding-bottom: 20px;
+  margin-bottom: 10px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -82,6 +75,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #1f1f1f;
+  border-bottom: 1px solid rgba(51, 46, 76, 0.2);
 }
 
 .our-masters-section .content-container .detail-button {

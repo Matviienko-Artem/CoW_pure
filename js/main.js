@@ -58,9 +58,9 @@ const readMoreBtn_singleTeacher = document.querySelector(
 const btn_1 = document.querySelector("#acc_btn_1");
 const btn_2 = document.querySelector("#acc_btn_2");
 const btn_3 = document.querySelector("#acc_btn_3");
-const acc_p_1 = document.querySelector("#acc_item_1 p");
-const acc_p_2 = document.querySelector("#acc_item_2 p");
-const acc_p_3 = document.querySelector("#acc_item_3 p");
+const acc_p_1 = document.querySelector("#acc_item_1");
+const acc_p_2 = document.querySelector("#acc_item_2");
+const acc_p_3 = document.querySelector("#acc_item_3");
 const headerDesktopMenuBtn = document.querySelector("#header-desktop-menu-btn");
 const headerDesktopMenu = document.querySelector("#header-desktop-menu");
 const headerMobileMenuBtn = document.querySelector("#header-mobile-menu-btn");
@@ -101,6 +101,7 @@ const SlideDown = (list, arrow) => {
   list.classList.toggle("open");
   arrow.classList.toggle("rotate");
 };
+
 const openPlus = (btn, list) => {
   btn.addEventListener("click", () => {
     const plus = document.querySelector(`#${btn.id} span`);
@@ -112,6 +113,7 @@ const openPlus = (btn, list) => {
     }
   });
 };
+
 const openHeaderMenu = (e) => {
   e.preventDefault();
   headerDesktopMenu.classList.toggle("open");

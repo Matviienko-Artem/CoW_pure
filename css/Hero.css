@@ -189,12 +189,12 @@
 }
 .hero_cart_container .cart-icon:hover,
 .hero_cart_container .cart-icon:focus {
-  background-color: #332e4c;
+  background-color: #d9d9d1;
 }
-.hero_cart_container .cart-icon:hover path,
+/* .hero_cart_container .cart-icon:hover path,
 .hero_cart_container .cart-icon:focus path {
   fill: #fff;
-}
+} */
 
 .swiper.heroSwiper .swiper-pagination {
   display: none !important;

@@ -1,52 +1,17 @@
 .our-school-section {
   position: relative;
-
-  padding: 30px 30px;
-
+  padding: 30px 12px 75px 12px;
   width: 100%;
   min-height: 369px;
   background-image: linear-gradient(to top, #fff 50%, #b8c3cb 50%);
-}
-@media (min-width: 1024px) {
-  .our-school-section {
-    display: flex;
-
-    min-height: 555px;
-    background-image: linear-gradient(to bottom, #b8c3cb 80%, #fff 20%);
-  }
 }
 
 .our-school-section .our-school-image {
   margin-left: auto;
   margin-right: auto;
-  width: 464px;
-  min-height: 464px;
-  /* background-image: url("../images/our_school_img_small.png");
-  background-size: contain;
-  background-repeat: no-repeat; */
 }
-
-@media (min-width: 1024px) {
-  .our-school-section .our-school-image {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-@media (max-width: 425px) {
-  .our-school-section .our-school-image {
-    width: 280px;
-  }
-}
-
-.our-school-section .our-school-accordeon {
-  margin-top: 30px;
-}
-
-@media (min-width: 1024px) {
-  .our-school-section .our-school-accordeon {
-    width: 40%;
-    margin-left: 30px;
-  }
+.our-school-section .our-school-image img {
+  display: block;
 }
 
 .our-school-section .accordeon-heading {
@@ -83,18 +48,6 @@
   color: #fff;
 }
 
-@media (min-width: 1024px) {
-  .our-school-section .accordeon-btn {
-    background-color: #fff;
-  }
-  .our-school-section .accordeon-btn .count-circle {
-    border: 1px dashed #b8c3cb;
-  }
-  .our-school-section .accordeon-btn .count-circle span {
-    color: #b8c3cb;
-  }
-}
-
 .our-school-section .our-school-accordeon ul {
   padding-left: 5px;
   margin: 0;
@@ -102,10 +55,15 @@
 }
 
 .our-school-section .our-school-accordeon li {
+  max-height: 92px;
   position: relative;
   border-bottom: 1px solid #1f1f1f;
-
   overflow: hidden;
+  transition: max-height 500ms;
+}
+
+.our-school-section .our-school-accordeon li.open {
+  max-height: 500px;
 }
 
 .our-school-section .open {
@@ -118,27 +76,61 @@
   font-family: "Cormorant", serif;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 26px;
   line-height: 1.22;
+  letter-spacing: 0.03em;
   color: #1f1f1f;
 }
 .our-school-section .our-school-accordeon p {
-  max-height: 0;
-  overflow: hidden;
   margin: 0;
-
+  margin-bottom: 30px;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 16px;
+  line-height: 1.44;
   text-transform: lowercase;
 
   color: #1f1f1f;
   text-transform: lowercase;
-  transition: max-height 1500ms ease;
 }
 
-.our-school-section .our-school-accordeon p.open {
-  max-height: 500px;
-  margin-bottom: 10px;
+@media (min-width: 1024px) {
+  .our-school-section {
+    display: flex;
+    padding: 40px 40px 80px 40px;
+
+    min-height: 555px;
+    background-image: linear-gradient(to bottom, #b8c3cb 80%, #fff 20%);
+  }
+  .our-school-section .our-school-image {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .our-school-section .our-school-accordeon {
+    margin-top: 30px;
+    width: 40%;
+    margin-left: 30px;
+    max-width: 541px;
+  }
+
+  .our-school-section .accordeon-btn {
+    background-color: #fff;
+  }
+  .our-school-section .accordeon-btn .count-circle {
+    border: 1px dashed #b8c3cb;
+  }
+  .our-school-section .accordeon-btn .count-circle span {
+    color: #b8c3cb;
+  }
+  .our-school-section .our-school-accordeon li {
+    max-height: 105px;
+  }
+  .our-school-section .our-school-accordeon h3 {
+    font-size: 36px;
+  }
+  .our-school-section .our-school-accordeon p {
+    max-width: 450px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
