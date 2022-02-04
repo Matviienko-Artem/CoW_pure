@@ -6,7 +6,7 @@
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.16;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -18,7 +18,7 @@
   font-family: "Cormorant", serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 33px;
   line-height: 1.22;
   letter-spacing: 0.03em;
 
@@ -28,6 +28,9 @@
 .our-masters-section .master-photo {
   width: 100%;
 }
+.our-masters-section .master-photo img {
+  display: block;
+}
 
 @media (min-width: 1024px) {
   .our-masters-section .first-container {
@@ -35,6 +38,12 @@
   }
   .our-masters-section .container_for_slider {
     background-image: linear-gradient(to top, #d9d9d1 50%, #fff 50%);
+  }
+  .our-masters-section .container_for_slider h4 {
+    font-size: 12px;
+  }
+  .our-masters-section .container_for_slider h2 {
+    font-size: 36px;
   }
 }
 
@@ -45,8 +54,10 @@
 }
 @media (max-width: 1024px) {
   .our-masters-section .content-container {
-    padding-top: 0;
-    margin: auto;
+    padding: 0 20px 50px 20px;
+  }
+  .swiper.ourMastersSwiper .swiper-slide {
+    max-width: 295px;
   }
 }
 

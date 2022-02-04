@@ -7,6 +7,10 @@
   padding: 30px;
 
   background-color: #332e4c;
+  background-image: url("../images/contacts_lines.png");
+
+  background-position: bottom left;
+  background-repeat: no-repeat;
 
   font-family: "Roboto", sans-serif;
   font-weight: normal;
@@ -30,8 +34,8 @@
 }
 
 .address-section .contacts-icon .icon-circle {
-  height: 80%;
-  width: 80%;
+  height: 43px;
+  width: 43px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,15 +68,20 @@
   text-transform: capitalize;
 }
 .address-section h2 {
-  width: 60%;
+  width: 80%;
   margin-top: auto;
   margin-bottom: 0;
   font-family: "Cormorant", serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 1.22;
+  letter-spacing: 0.1em;
 }
 
 @media (min-width: 1024px) {
+  .address-section h2 {
+    font-size: 36px;
+    letter-spacing: 0.03em;
+  }
 }

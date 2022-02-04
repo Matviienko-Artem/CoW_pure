@@ -23,8 +23,8 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-  padding: 10px;
-  width: 237px;
+  padding: 0 10px;
+  width: 231px;
   background-color: #b8c3cb;
 }
 #footer .logo svg {
@@ -32,7 +32,7 @@
 }
 
 #footer .middle-line {
-  margin-top: 45px;
+  margin-top: 35px;
 }
 
 #footer .lower-footer {
@@ -45,10 +45,6 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-}
-
-#footer .social-networks div svg {
-  margin: 10px 17px 10px 24px;
 }
 
 #footer h1 {
@@ -65,10 +61,34 @@
   font-size: 14px;
 }
 
-#footer .privacy-policy a {
+#footer .privacy-policy a,
+#footer .by-smelo a,
+#footer .by-smelo p {
+  position: relative;
   color: #1f1f1f;
   text-decoration: none;
   margin: 10px;
+}
+#footer .by-smelo p {
+  text-align: start;
+}
+#footer .privacy-policy a::after,
+#footer .by-smelo a::after {
+  display: block;
+  content: "";
+  position: absolute;
+  border: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #000;
+  transition: width 500ms ease;
+}
+#footer .privacy-policy a:hover::after,
+#footer .privacy-policy a:focus::after,
+#footer .by-smelo a:hover::after,
+#footer .by-smelo a:focus::after {
+  width: 100%;
 }
 
 #footer .by-smelo {
@@ -78,26 +98,38 @@
   justify-content: space-between;
   font-size: 14px;
 }
-@media (max-width: 1100px) {
+#footer .social-networks a {
+  width: 27px;
+  height: 27px;
+  display: inline-block;
+  margin: 10px;
+  transition: transform 500ms ease;
+}
+#footer .social-networks a:hover,
+#footer .social-networks a:focus {
+  transform: scale(1.2);
+}
+@media (max-width: 1024px) {
   #footer .by-smelo span {
     display: none;
   }
+  #footer .by-smelo p {
+    font-size: 10px;
+  }
 }
 
-#footer .by-smelo a {
-  color: #1f1f1f;
-  text-decoration: none;
-  margin: 10px;
-}
-
-@media (min-width: 1100px) {
+@media (min-width: 1024px) {
   #footer .lower-footer ul {
     display: flex;
     justify-content: space-between;
   }
   #footer .social-networks {
-    margin-left: 18px;
+    margin-left: 10px;
     order: 2;
+  }
+  #footer .social-networks a {
+    width: 20px;
+    height: 20px;
   }
   #footer .privacy-policy {
     flex-direction: row;

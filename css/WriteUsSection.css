@@ -11,14 +11,21 @@
 .write-us-section h2 {
   margin-top: 0;
   font-family: "Cormorant", serif;
-
   font-weight: bold;
-  font-size: 36px;
-  line-height: 44px;
-
-  letter-spacing: 0.03em;
+  font-size: 30px;
+  line-height: 1.22;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
+.write-us-section form {
+  margin-top: 30px;
+}
+
+.write-us-section form .feedback-textarea {
+  margin-top: 20px;
+}
+
 .write-us-section input,
 .write-us-section textarea {
   padding: 10px 10px 10px 0;
@@ -60,10 +67,8 @@
   flex-wrap: wrap;
 }
 
-
 #feedback-submit-button {
   display: block;
-  margin-left: auto;
   height: 35px;
   border: none;
   cursor: pointer;
@@ -88,5 +93,13 @@
 @media (min-width: 1024px) {
   .write-us-section input {
     width: 48%;
+  }
+  .write-us-section h2 {
+    width: 80%;
+    font-size: 36px;
+    letter-spacing: 0.03em;
+  }
+  #feedback-submit-button {
+    margin-left: auto;
   }
 }
