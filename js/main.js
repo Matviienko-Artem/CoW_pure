@@ -69,33 +69,6 @@ const headerLines = document.querySelectorAll(
   "#header-desktop-menu .lines svg path"
 );
 const arrHeaderLines = Array.from(headerLines);
-const directionsBtn = document.querySelector("li.directions-btn");
-const programsListBtn = document.querySelector("li.programs-btn");
-const listDirections = document.querySelector("ul.additional-list.directions");
-const listPrograms = document.querySelector("ul.additional-list.programs");
-const headerMobileAdditionalMenuBtn = document.querySelector(
-  "#header-mobile-additional-menu-btn"
-);
-const comeBackToMainListBtn = document.querySelector(
-  ".additional-list .come-back-btn"
-);
-const mobMainMenu = document.querySelector("#header-mobile-menu ul.main-menu");
-const mobAdditionalList = document.querySelector(
-  "#header-mobile-menu ul.additional-list"
-);
-const directionsMobileListBtn = document.querySelector(
-  "#header-mobile-menu li.directions-btn"
-);
-const directionsMobileMenu = document.querySelector(
-  "#header-mobile-menu ul.directions-list"
-);
-
-const programsMobileListBtn = document.querySelector(
-  "#header-mobile-menu li.programs-btn"
-);
-const programsMenu = document.querySelector(
-  "#header-mobile-menu ul.programs-list"
-);
 
 const SlideDown = (list, arrow) => {
   list.classList.toggle("open");
@@ -112,49 +85,6 @@ const openPlus = (btn, list) => {
       plus.innerText = "+";
     }
   });
-};
-
-const openHeaderMenu = (e) => {
-  e.preventDefault();
-  headerDesktopMenu.classList.toggle("open");
-
-  if (Array.from(headerDesktopMenu.classList).every((i) => i !== "open")) {
-    arrHeaderLines.map((i) => {
-      i.classList.remove("addingLinesAnimation");
-    });
-  } else {
-    arrHeaderLines.map((i) => {
-      i.classList.add("addingLinesAnimation");
-    });
-  }
-};
-
-const openDirectionalList = (e) => {
-  e.target.classList.add("active");
-  programsListBtn.classList.remove("active");
-  listDirections.classList.remove("open");
-  listPrograms.classList.add("open");
-};
-
-const openProgramslList = (e) => {
-  e.target.classList.add("active");
-  directionsBtn.classList.remove("active");
-  listPrograms.classList.remove("open");
-  listDirections.classList.add("open");
-};
-const toggleAddictionalMenu = (e) => {
-  e.preventDefault();
-  mobMainMenu.classList.toggle("slide-main");
-  mobAdditionalList.classList.toggle("slide-additional");
-};
-const slideDownMobileMenu = (btn, menu) => {
-  if (Array.from(menu.classList).every((i) => i !== "slide")) {
-    btn.classList.add("open");
-    menu.classList.add("slide");
-  } else {
-    btn.classList.remove("open");
-    menu.classList.remove("slide");
-  }
 };
 
 if (readMoreBtn_catalog) {
@@ -187,45 +117,4 @@ if (btn_2) {
 
 if (btn_3) {
   openPlus(btn_3, acc_p_3);
-}
-
-if (headerMobileMenuBtn) {
-  headerMobileMenuBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    headerMobileMenu.classList.toggle("open");
-  });
-}
-
-if (headerDesktopMenuBtn) {
-  headerDesktopMenuBtn.addEventListener("click", (e) => openHeaderMenu(e));
-}
-if (directionsBtn) {
-  directionsBtn.addEventListener("click", (e) => {
-    openDirectionalList(e);
-  });
-}
-if (programsListBtn) {
-  programsListBtn.addEventListener("click", (e) => {
-    openProgramslList(e);
-  });
-}
-if (headerMobileAdditionalMenuBtn) {
-  headerMobileAdditionalMenuBtn.addEventListener("click", (e) => {
-    toggleAddictionalMenu(e);
-  });
-}
-if (comeBackToMainListBtn) {
-  comeBackToMainListBtn.addEventListener("click", (e) => {
-    toggleAddictionalMenu(e);
-  });
-}
-if (directionsMobileListBtn) {
-  directionsMobileListBtn.addEventListener("click", () =>
-    slideDownMobileMenu(directionsMobileListBtn, directionsMobileMenu)
-  );
-}
-if (programsMobileListBtn) {
-  programsMobileListBtn.addEventListener("click", () =>
-    slideDownMobileMenu(programsMobileListBtn, programsMenu)
-  );
 }

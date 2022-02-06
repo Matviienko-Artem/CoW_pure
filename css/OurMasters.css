@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.our-masters-section .delimiter {
+  height: 0;
+}
+
 .our-masters-section .container_for_slider h4 {
   font-family: "Roboto", sans-serif;
   font-style: normal;

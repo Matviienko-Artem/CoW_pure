@@ -2,6 +2,12 @@
   background: #332e4c;
 }
 
+.services-section .delimiter {
+  z-index: 0;
+  height: 0px;
+  transform: translate(0, 300px);
+}
+
 .services-section .back-wrapper {
   position: relative;
   min-height: 455px;
