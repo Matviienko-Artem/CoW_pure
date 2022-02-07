@@ -69,7 +69,83 @@ const headerLines = document.querySelectorAll(
   "#header-desktop-menu .lines svg path"
 );
 const arrHeaderLines = Array.from(headerLines);
+const cartClientDetailsFormInputs = document.querySelectorAll(
+  "#cart_client_details input[type='text']"
+);
+const arrCartClientDetailsFormInputs = Array.from(cartClientDetailsFormInputs);
+const cartDeliveryDetailsFormInputs = document.querySelectorAll(
+  "#cart_delivery_details input[type='text']"
+);
+const arrCartDeliveryDetailsFormInputs = Array.from(
+  cartDeliveryDetailsFormInputs
+);
+const pickupRadioBtn = document.querySelector(".radio-container input#pickup");
+const courierRadioBtn = document.querySelector(
+  ".radio-container input#courier"
+);
+const newMailRadioBtn = document.querySelector(
+  ".radio-container input#new_mail"
+);
+const pickupContainer = document.querySelector(
+  "form#cart_delivery_details .pickup-container"
+);
+const courierContainer = document.querySelector(
+  "form#cart_delivery_details .courier-container"
+);
+const newMailContainer = document.querySelector(
+  "form#cart_delivery_details .new_mail-container"
+);
 
+// уезжающий label с input
+arrCartClientDetailsFormInputs.map((i) =>
+  i.addEventListener("change", () => {
+    if (i.value !== "") {
+      i.classList.add("active");
+    } else {
+      i.classList.remove("active");
+    }
+  })
+);
+arrCartDeliveryDetailsFormInputs.map((i) =>
+  i.addEventListener("change", () => {
+    if (i.value !== "") {
+      i.classList.add("active");
+    } else {
+      i.classList.remove("active");
+    }
+  })
+);
+
+// переключение контента от радиокнопки на странице корзины
+if (pickupRadioBtn) {
+  pickupRadioBtn.addEventListener("change", () => {
+    if (pickupRadioBtn.checked) {
+      pickupContainer.style.display = "block";
+      courierContainer.style.display = "none";
+      newMailContainer.style.display = "none";
+    }
+  });
+}
+if (courierRadioBtn) {
+  courierRadioBtn.addEventListener("change", () => {
+    if (courierRadioBtn.checked) {
+      courierContainer.style.display = "block";
+      pickupContainer.style.display = "none";
+      newMailContainer.style.display = "none";
+    }
+  });
+}
+if (newMailRadioBtn) {
+  newMailRadioBtn.addEventListener("change", () => {
+    if (newMailRadioBtn.checked) {
+      newMailContainer.style.display = "block";
+      courierContainer.style.display = "none";
+      pickupContainer.style.display = "none";
+    }
+  });
+}
+
+// -----------------------
 const SlideDown = (list, arrow) => {
   list.classList.toggle("open");
   arrow.classList.toggle("rotate");

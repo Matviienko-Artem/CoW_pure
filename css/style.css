@@ -1183,6 +1183,7 @@ button:focus {
 .detail-button span {
   display: inline-block;
   transition: transform 500ms ease;
+  margin-left: 10px;
 }
 .detail-button:hover span {
   transform: translateX(50%);
