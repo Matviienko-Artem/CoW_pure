@@ -589,7 +589,7 @@
 
     <div class="our-school-section">
         <div class="our-school-image">
-            <img width="100%" height="100%" src="./images/our-school-image.jpg" alt="">
+            <img width="100%" src="./images/our-school-image.jpg" alt="">
         </div>
         <div class="our-school-accordeon">
             <ul>
@@ -1040,9 +1040,9 @@
 
     <script>
         const heroSwiper = new Swiper('.heroSwiper', {
-             autoplay: {
-                delay: 4000,
-            },
+            //  autoplay: {
+            //     delay: 4000,
+            // },
             slidesPerView: 1,
             // loop: true,
             navigation: {
@@ -1089,7 +1089,8 @@
         const articleSwiper = new Swiper('.articleSwiper', {
                 slidesPerView: "auto",
                 spaceBetween: 100,
-                 centeredSlides: true,
+                centeredSlides: true,
+                initialSlide: 1,
                 // loop: true,
                 grabCursor: true,
                 navigation: {

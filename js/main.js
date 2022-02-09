@@ -69,16 +69,14 @@ const headerLines = document.querySelectorAll(
   "#header-desktop-menu .lines svg path"
 );
 const arrHeaderLines = Array.from(headerLines);
+
 const cartClientDetailsFormInputs = document.querySelectorAll(
-  "#cart_client_details input[type='text']"
+  ".contact_details input[type='text']"
 );
 const arrCartClientDetailsFormInputs = Array.from(cartClientDetailsFormInputs);
-const cartDeliveryDetailsFormInputs = document.querySelectorAll(
-  "#cart_delivery_details input[type='text']"
-);
-const arrCartDeliveryDetailsFormInputs = Array.from(
-  cartDeliveryDetailsFormInputs
-);
+const popupFormInputs = document.querySelectorAll(".popup input[type='text']");
+const arrPopupFormInputsFormInputs = Array.from(popupFormInputs);
+
 const pickupRadioBtn = document.querySelector(".radio-container input#pickup");
 const courierRadioBtn = document.querySelector(
   ".radio-container input#courier"
@@ -97,6 +95,7 @@ const newMailContainer = document.querySelector(
 );
 
 // уезжающий label с input
+
 arrCartClientDetailsFormInputs.map((i) =>
   i.addEventListener("change", () => {
     if (i.value !== "") {
@@ -106,7 +105,8 @@ arrCartClientDetailsFormInputs.map((i) =>
     }
   })
 );
-arrCartDeliveryDetailsFormInputs.map((i) =>
+
+arrPopupFormInputsFormInputs.map((i) =>
   i.addEventListener("change", () => {
     if (i.value !== "") {
       i.classList.add("active");

@@ -124,7 +124,7 @@
   min-width: 352px;
   width: 80%;
   min-height: 76px;
-  padding: 15px;
+  padding: 20px 15px 0 15px;
   border: 1px solid #fff;
   background: rgba(255, 255, 255, 0.3);
 
@@ -136,8 +136,8 @@
 }
 
 .hero_cart_container h4 {
-  width: calc(100% - 74px);
   margin: 0;
+  width: calc(100% - 74px);
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -160,7 +160,8 @@
 
 .hero-cart-list li {
   position: relative;
-  margin: 10px;
+  margin: 15px 10px;
+  font-weight: 300;
 }
 
 .hero-cart-list li::before {
@@ -191,10 +192,12 @@
 .hero_cart_container .cart-icon:focus {
   background-color: #d9d9d1;
 }
-/* .hero_cart_container .cart-icon:hover path,
-.hero_cart_container .cart-icon:focus path {
+.hero_cart_container .cart-icon:active {
+  background-color: #332e4c;
+}
+.hero_cart_container .cart-icon:active path {
   fill: #fff;
-} */
+}
 
 .swiper.heroSwiper .swiper-pagination {
   display: none !important;
@@ -236,6 +239,7 @@
     width: 100%;
     text-align: left;
     margin-top: 0;
+    margin-bottom: 20px;
   }
   .hero_slider_item .hero-item-heading h4 {
     margin-top: 45px;
@@ -309,7 +313,7 @@
     color: #fff;
     width: auto;
     left: 30px;
-    top: 26%;
+    top: calc(30% - 40px);
   }
 
   .swiper.heroSwiper .swiper-pagination-current {
