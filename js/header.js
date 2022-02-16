@@ -8,13 +8,13 @@ if (header) {
     let top = document.documentElement.getBoundingClientRect().y;
 
     if (lastScrollTop > -10) {
-      header.style.backgroundColor = "rgba(0,0,0,0)";
-      header.style.transform = "translate(0,0)";
+      header.classList.remove("hide_up");
+      header.classList.remove("blackout");
     } else if (lastScrollTop < top) {
-      header.style.backgroundColor = "rgba(0,0,0,0.3)";
-      header.style.transform = "translate(0,0)";
+      header.classList.add("blackout");
+      header.classList.remove("hide_up");
     } else if (lastScrollTop > top) {
-      header.style.transform = "translate(0,-200%)";
+      header.classList.add("hide_up");
     }
 
     lastScrollTop = top;
