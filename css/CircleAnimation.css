@@ -49,7 +49,7 @@
   width: 100%;
   height: 100%;
   animation-name: scale;
-  animation-duration: 10s;
+  animation-duration: 6s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }

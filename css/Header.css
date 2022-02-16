@@ -24,7 +24,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  background-color: rgb(0, 0, 0, 0.2);
+  transition: transform 500ms ease;
 }
 
 #header.black {
@@ -107,8 +107,8 @@
 }
 
 #menu-navbar .sub-menu.open {
-  display: block;
-  overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 #header .icons-group {
@@ -122,7 +122,7 @@
 }
 
 #header .icons-group .icon {
-  margin: 0 2px;
+  margin: 0 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -236,7 +236,8 @@
 }
 .modal-wrapper #cart_popup.open,
 .modal-wrapper #personal_popup.open,
-.modal-wrapper #forgot_popup.open {
+.modal-wrapper #forgot_popup.open,
+.modal-wrapper #currency_popup.open {
   display: block;
 }
 
@@ -370,6 +371,34 @@
   align-items: center;
   justify-content: space-between;
 }
+#currency_popup .popup-body {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup .currency-btn {
+  margin: 25px;
+  outline: none;
+  width: 100%;
+  max-width: 223px;
+  min-height: 54px;
+  text-transform: uppercase;
+  background-color: #332e4c;
+  border: 1px solid #332e4c;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+.popup .currency-btn:hover {
+  background-color: #fff;
+  color: #332e4c;
+}
 
 #forgot_popup.popup .popup-footing {
   justify-content: center;
@@ -452,6 +481,7 @@
   text-transform: uppercase;
   color: rgba(31, 31, 31, 0.36);
   transition: transform 300ms ease;
+  pointer-events: none;
 }
 
 .popup form input[type="text"]:focus ~ label,
@@ -510,6 +540,24 @@
   justify-content: center;
   border: 1px dashed #fff;
   border-radius: 50%;
+}
+
+.registration__show {
+  border: none;
+  outline: none;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 27px;
+  right: 4px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-image: url("../images/reg/show.svg");
+  cursor: pointer;
+}
+
+#menu-navbar .menu-item.contacts_btns {
+  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -641,9 +689,16 @@
     letter-spacing: 0.1em;
     text-transform: uppercase;
   }
-
   .additional-sub-menu.directions.open li,
   .additional-sub-menu.programs.open li {
+    padding: 20px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 500ms ease;
+  }
+  .additional-sub-menu.directions.open li:hover,
+  .additional-sub-menu.directions.open li:focus,
+  .additional-sub-menu.programs.open li:hover,
+  .additional-sub-menu.programs.open li:focus {
     padding: 20px;
     color: rgba(255, 255, 255, 1);
   }
@@ -651,6 +706,9 @@
   #header.black .additional-sub-menu.programs.open li {
     padding: 20px;
     color: rgba(51, 46, 76, 1);
+  }
+  #header .icons-group {
+    margin-left: 20px;
   }
 }
 
@@ -677,20 +735,18 @@
   }
 
   #menu-navbar.open {
-    display: block;
+    display: flex;
+    flex-direction: column;
   }
   #header .icons-group {
     width: 100%;
-  }
-  #header .icons-group .icon {
-    margin: 0 4px;
   }
 
   #header .icons-group .icon.desctop-hidden {
     display: flex;
   }
   #menu-navbar {
-    padding: 30px 0;
+    padding-top: 30px;
     position: absolute;
     width: 100%;
     min-height: calc(100vh - 55px);
@@ -732,6 +788,34 @@
     border-bottom: 1px solid #1f1f1f;
   }
 
+  #header #menu-navbar .menu-item.contacts_btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    border: none;
+  }
+
+  #menu-navbar .menu-item.contacts_btns .item {
+    margin: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+  #menu-navbar .menu-item.contacts_btns .circle {
+    width: 43px;
+    height: 43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed #332e4c;
+    border-radius: 50%;
+  }
+
   #menu-navbar .sub-menu {
     list-style: none;
     position: absolute;
@@ -742,6 +826,11 @@
     transform: translate(100%, 0);
     background-color: #332e4c;
   }
+
+  #menu-navbar .sub-menu.open {
+    overflow: auto;
+  }
+
   #header.black #menu-navbar .sub-menu {
     background-color: rgba(255, 255, 255, 0.9);
   }
@@ -886,5 +975,11 @@
   }
   .popup .register-btn {
     min-height: 75px;
+  }
+  #currency_popup .popup-body {
+    flex-direction: column;
+  }
+  .popup .currency-btn {
+    margin: 8px;
   }
 }

@@ -45,10 +45,10 @@
                         <div class="delimiter">
                             <svg preserveAspectRatio="none" width="1440" height="951" viewBox="0 0 1440 951" fill="none"
                                 xmlns="http://www.w3.org/2000/svg" class="lineSVG">
-                                <path opacity="0.54"
+                                <path opacity="0.14"
                                     d="M1444.41 172.5C1443.79 363.197 1044.06 725.744 750.235 553.003C300.376 288.525 -110.333 252.537 -462.086 652.727"
                                     stroke="#B8C3CB" stroke-width="1"></path>
-                                <path opacity="0.54"
+                                <path opacity="0.14"
                                     d="M1444.41 172.5C1443.79 363.197 1044.06 725.744 750.235 553.003C300.376 288.525 -110.333 252.537 -462.086 652.727"
                                     stroke="#ffffff" stroke-width="1"></path>
                             </svg>
@@ -138,7 +138,7 @@
                     контакты
                 </a>
             </li>
-            <li id="menu-item-613" class="menu-item  currency">
+            <li id="toggle_currency_btn" class="menu-item  currency">
                 <a href="#">
                     грн
                 </a>
@@ -357,11 +357,12 @@
                         <div>
                             <input type="text" name="password" id="client_password">
                             <label for="client_password">ваш пароль</label>
+                            <button type="button" class="registration__show"></button>
                         </div>
                    </form>
                 </div>
                 <div class="popup-footing">
-                    <a id="forgot_personal_btn" href="#" class="detail-button">
+                    <a id="toggle_forgot_btn" href="#" class="detail-button">
                         Напомнить пароль
                         <span>
                             &#11049;&#11049;<b>&#10230;</b>
@@ -445,6 +446,23 @@
                             </span>
                         </a>
                     </div>
+                </div>
+            </div>
+            <div id="currency_popup" class="popup">
+                <div class="popup-heading">
+                    <p>выберите валюту</p>
+                    <div class="close-btn">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+                                fill="#332E4C" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="popup-body">
+                    <button class="currency-btn" type="button">грн</button>
+                    <button class="currency-btn" type="button">USD</button>
+
                 </div>
             </div>
         </div>

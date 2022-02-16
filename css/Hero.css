@@ -133,6 +133,7 @@
   font-weight: normal;
   font-size: 11px;
   line-height: 13px;
+  z-index: 2;
 }
 
 .hero_cart_container h4 {
@@ -226,6 +227,7 @@
     min-width: 243px;
     width: 243px;
     height: 243px;
+    z-index: 2;
   }
 
   .hero_cart_container .cart-icon {

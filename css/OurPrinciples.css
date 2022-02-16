@@ -1,5 +1,5 @@
 .our-principles-section {
-  padding: 85px 0;
+  padding: 85px 80px;
 
   background-image: linear-gradient(to bottom, #d9d9d1 50%, #fff 50%);
 
@@ -29,11 +29,15 @@
   text-align: center;
   text-transform: uppercase;
 }
+.our-principles-section h3 {
+  margin: 20px 0 50px 0;
+}
 
 .our-principles-slider-item {
-  width: 380px;
-  width: 90%;
+  width: 100%;
+  max-width: 390px;
   height: 500px;
+  margin: 0 auto;
 
   background-image: url("../images/slide-1.png");
   background-position: center;
@@ -64,7 +68,7 @@
 .inner-wrapper {
   width: 100%;
   height: 100%;
-  padding: 30px;
+  padding: 85px 30px;
 
   display: flex;
   flex-direction: column;
@@ -78,13 +82,12 @@
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.17;
   text-transform: lowercase;
-
-  margin-top: 48px;
 }
 
 .inner-wrapper .line {
+  margin: 65px 0 40px 0;
   position: relative;
   width: 100px;
   height: 1px;
@@ -102,13 +105,45 @@
 }
 
 @media (max-width: 1024px) {
+  .our-principles-section {
+    padding: 85px 0;
+  }
+
+  .our-principles-section h3,
+  .inner-wrapper h4 {
+    font-size: 30px;
+  }
+  .our-principles-section h3 {
+    margin: 20px 0 30px 0;
+  }
+
+  .inner-wrapper {
+    padding: 60px 24px;
+  }
+
+  .inner-wrapper .line {
+    margin: 40px 0 60px 0;
+  }
+
+  .inner-wrapper p {
+    font-size: 16px;
+  }
+
   .our-principles-slider-item {
     margin: 0 auto;
   }
+
   .our-principles-slider-item.second {
     margin-top: 0;
   }
   .our-principles-slider .slick-slide {
     transform: scale(0.9);
+  }
+  .our-principles-section .principlesSwiper .swiper-slide {
+    transform: scale(0.9);
+    transition: all 400ms ease;
+  }
+  .our-principles-section .principlesSwiper .swiper-slide-active {
+    transform: scale(1);
   }
 }

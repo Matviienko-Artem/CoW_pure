@@ -17,5 +17,9 @@
   color: #fff;
 }
 
+#about_school_page .our-masters-section .delimiter svg {
+  top: -750px;
+}
+
 @media (max-width: 1024px) {
 }

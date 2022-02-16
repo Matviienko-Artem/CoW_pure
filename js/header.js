@@ -1,4 +1,28 @@
+// затемнение Хедера при скроле вниз, появляется при скроле вверх и скрытие его при скроле вниз
+
+const header = document.getElementById("header");
+
+let lastScrollTop = 0;
+if (header) {
+  window.addEventListener("scroll", function () {
+    let top = document.documentElement.getBoundingClientRect().y;
+
+    if (lastScrollTop > -10) {
+      header.style.backgroundColor = "rgba(0,0,0,0)";
+      header.style.transform = "translate(0,0)";
+    } else if (lastScrollTop < top) {
+      header.style.backgroundColor = "rgba(0,0,0,0.3)";
+      header.style.transform = "translate(0,0)";
+    } else if (lastScrollTop > top) {
+      header.style.transform = "translate(0,-200%)";
+    }
+
+    lastScrollTop = top;
+  });
+}
+
 // открыие основного и доп.меню Хедера
+
 const mobileBurgerBtn = document.querySelector("#header-mobile-menu-btn");
 const menuNavBar = document.querySelector("#menu-navbar");
 const servicesBtn = document.querySelector(
@@ -25,6 +49,11 @@ if (mobileBurgerBtn) {
   mobileBurgerBtn.addEventListener("click", (e) => {
     e.preventDefault();
     menuNavBar.classList.toggle("open");
+    if (menuNavBar.classList.contains("open")) {
+      document.querySelector("html").style.overflow = "hidden";
+    } else {
+      document.querySelector("html").style.overflow = "auto";
+    }
   });
 }
 if (servicesBtn) {
@@ -32,6 +61,11 @@ if (servicesBtn) {
     e.preventDefault();
     menuNavBar.classList.add("slide-left");
     servicesSubMenu.classList.toggle("open");
+    if (servicesSubMenu.classList.contains("open")) {
+      document.querySelector("html").style.overflow = "hidden";
+    } else {
+      document.querySelector("html").style.overflow = "auto";
+    }
   });
 }
 if (goBackBtn) {
@@ -82,12 +116,19 @@ const closePersonalPopupBtn = document.querySelector(
   "#personal_popup .close-btn"
 );
 
-const toggleForgotBtn = document.getElementById("forgot_personal_btn");
+const toggleForgotBtn = document.getElementById("toggle_forgot_btn");
 const forgotModalPopup = document.getElementById("forgot_popup");
 const closeForgotPopupBtn = document.querySelector("#forgot_popup .close-btn");
 const comeBackToPersonalBtn = document.querySelector(
   "#forgot_popup .come-back-btn"
 );
+
+const toggleCurrencyBtn = document.getElementById("toggle_currency_btn");
+const currencyModalPopup = document.getElementById("currency_popup");
+const closeCurrencyPopupBtn = document.querySelector(
+  "#currency_popup .close-btn"
+);
+
 function togglePopup(btn, popup) {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -127,11 +168,19 @@ if (comeBackToPersonalBtn) {
   togglePopup(comeBackToPersonalBtn, forgotModalPopup);
 }
 
+if (toggleCurrencyBtn) {
+  togglePopup(toggleCurrencyBtn, currencyModalPopup);
+}
+if (closeCurrencyPopupBtn) {
+  togglePopup(closeCurrencyPopupBtn, currencyModalPopup);
+}
+
 document.addEventListener("click", (e) => {
   if (e.target === modalWrapper) {
     modalWrapper.classList.remove("open");
     cartModalPopup.classList.remove("open");
     personalModalPopup.classList.remove("open");
     forgotModalPopup.classList.remove("open");
+    currencyModalPopup.classList.remove("open");
   }
 });

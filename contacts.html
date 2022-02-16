@@ -385,12 +385,25 @@
                     <h2>НАПИШИТЕ НАМ и МЫ ОБЯЗАТЕЛЬНО ОТВЕТИМ ВАМ</h2>
                     <form id="feedback-form">
                         <div class="feedback-name">
-                            <input type="text" name="name" placeholder="Ваше имя" />
-                            <input type="tel" name="email" placeholder="Ваш телефон" />
+                            <div>
+                                <input type="text" name="name" />
+                                <label for="client_email">Ваше имя</label>
+                            </div>
+                            <div>
+                                <input type="tel" name="email" />
+                                <label for="client_email">Ваш телефон</label>
+                            </div>
+                    
                         </div>
                         <div class="feedback-question">
-                            <input type="email" name="email" placeholder="Ваш EMAIL" />
-                            <input type="text" name="email" placeholder="Ваш город" />
+                            <div>
+                                <input type="email" name="email" />
+                                <label for="client_email">Ваш EMAIL</label>
+                            </div>
+                            <div>
+                                <input type="text" name="email" />
+                                <label for="client_email">Ваш город</label>
+                            </div>
                         </div>
                         <div class="feedback-textarea">
                             <textarea name="text" placeholder="Вашe сообщение"></textarea>

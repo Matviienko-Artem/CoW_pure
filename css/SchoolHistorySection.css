@@ -28,7 +28,7 @@
 }
 
 .school-history-section .slide-container {
-  /* width: 200px; */
+  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -37,11 +37,10 @@
 }
 
 .school-history-section .slide-container.once {
-  margin-top: 180px;
+  margin-top: 160px;
 }
 
 .school-history-section .circle-container {
-  position: relative;
   width: 160px;
   height: 160px;
   border-radius: 50%;
@@ -51,53 +50,72 @@
   align-items: center;
   justify-content: center;
 }
-.school-history-section .circle-container.left::before {
-  content: "------------------------";
-  color: #332e4c;
+.school-history-section .slide-container.left .circle-container::before,
+.school-history-section
+  .slide-container.left_special
+  .circle-container::before {
+  content: "\25C6";
+  font-size: 20px;
   position: absolute;
-  left: 0;
-  transform: translateX(-100%);
+  left: -9px;
+  color: #332e4c;
 }
-.school-history-section .circle-container.left_special::before {
-  content: "\25C6  ----------------------";
-  color: #332e4c;
+.school-history-section .slide-container.left::before {
+  content: "";
+  width: calc((100% - 160px - 20px) / 2);
   position: absolute;
-  left: 0;
-  transform: translateX(-100%);
+  top: 80px;
+  left: 10px;
+  border-bottom: 1px dashed #332e4c;
 }
-.school-history-section .circle-container.right::after {
-  content: "---------------------- \25C6";
-  color: #332e4c;
+.school-history-section .slide-container.left_special::before {
+  content: "";
+  width: calc((100% - 160px) / 2);
   position: absolute;
-  right: 0;
-  transform: translateX(100%);
+  left: 10px;
+  top: 80px;
+  border-bottom: 1px dashed #332e4c;
 }
-.school-history-section .circle-container.diagonal::after {
-  content: "------------------------";
-  color: #332e4c;
+.school-history-section .slide-container.right::after {
+  content: "";
+  width: calc((100% - 160px) / 2);
   position: absolute;
-  bottom: -30%;
-  right: -90%;
+  top: 80px;
+  right: 10px;
+  border-bottom: 1px dashed #332e4c;
+}
+.school-history-section .slide-container.diagonal::after {
+  content: "";
+  width: calc((100% - 160px) / 2);
+  max-width: 200px;
+  position: absolute;
+  top: 160px;
+  right: 10px;
   transform: rotateZ(40deg);
+  border-bottom: 1px dashed #332e4c;
 }
-.school-history-section .circle-container.diagonal_sec::after {
-  content: "------------------------";
-  color: #332e4c;
+.school-history-section .slide-container.diagonal_sec::after {
+  content: "";
+  width: calc((100% - 160px) / 2);
+  max-width: 200px;
   position: absolute;
   top: -20%;
   right: -90%;
+  top: 20px;
+  right: 10px;
   transform: rotateZ(-40deg);
+  border-bottom: 1px dashed #332e4c;
 }
 .school-history-section .circle-border {
   width: 80%;
   height: 80%;
-  border-radius: 50%;
-  border: 1px dashed #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   color: #fff;
+  border-radius: 50%;
+  border: 1px dashed #fff;
 }
 .school-history-section .circle-border.column {
   flex-direction: column;
@@ -131,11 +149,12 @@
 }
 
 .school-history-section .slide-container p.spec_width {
-  padding: 0px 120px;
+  max-width: 200px;
 }
 
 .school-history-section .slide-container p {
-  padding: 0px 30px;
+  max-width: 300px;
+  margin-bottom: 20px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -148,15 +167,81 @@
 .school-history-section .historySwiper {
   margin-top: 30px;
 }
+.school-history-section .historySwiper .swiper-pagination {
+  width: auto;
+  top: 20%;
+  right: 33%;
+  left: auto;
+  bottom: auto;
+  color: #332e4c;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 100%;
+}
+.school-history-section
+  .historySwiper
+  .swiper-pagination
+  .swiper-pagination-current {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+}
+.school-history-section
+  .historySwiper
+  .swiper-pagination
+  .swiper-pagination-total {
+  position: absolute;
+  bottom: -15px;
+  right: -20px;
+}
+
+.school-history-section .historySwiper .swiper-button-next,
+.school-history-section .historySwiper .swiper-button-prev {
+  top: 236px;
+  width: 52px;
+  height: 52px;
+  color: #332e4c;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px dashed #332e4c;
+  transition: all 400ms ease;
+}
+.school-history-section .historySwiper .swiper-button-next:hover,
+.school-history-section .historySwiper .swiper-button-next:focus,
+.school-history-section .historySwiper .swiper-button-prev:hover,
+.school-history-section .historySwiper .swiper-button-prev:focus {
+  transform: scale(1.05);
+}
+.school-history-section .historySwiper .swiper-button-next {
+  right: 32%;
+}
+.school-history-section .historySwiper .swiper-button-prev {
+  left: 32%;
+}
+.school-history-section
+  .historySwiper
+  .swiper-button-next.swiper-button-disabled,
+.school-history-section
+  .historySwiper
+  .swiper-button-prev.swiper-button-disabled {
+  opacity: 0;
+}
+.school-history-section .historySwiper .swiper-button-next:after,
+.school-history-section .historySwiper .swiper-button-prev:after {
+  font-size: 20px;
+}
 @media (max-width: 1024px) {
-  .school-history-section .circle-container.left::before {
-    content: "--------------------";
-  }
-  .school-history-section .circle-container.right::after {
-    content: "------------------ \25C6";
+  .school-history-section .historySwiper .swiper-pagination {
+    top: 20%;
+    right: 40px;
   }
 
-  .school-history-section .circle-container.left_special::before {
-    content: "\25C6  -------------------";
+  .school-history-section .historySwiper .swiper-button-next {
+    right: 0;
+  }
+  .school-history-section .historySwiper .swiper-button-prev {
+    left: 0;
   }
 }

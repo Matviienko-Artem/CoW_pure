@@ -10,7 +10,7 @@
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -22,7 +22,7 @@
   font-family: "Cormorant", serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 33px;
+  font-size: 30px;
   line-height: 1.22;
   letter-spacing: 0.03em;
 
@@ -43,9 +43,7 @@
   .our-masters-section .container_for_slider {
     background-image: linear-gradient(to top, #d9d9d1 50%, #fff 50%);
   }
-  .our-masters-section .container_for_slider h4 {
-    font-size: 12px;
-  }
+
   .our-masters-section .container_for_slider h2 {
     font-size: 36px;
   }
@@ -55,14 +53,6 @@
   min-height: 347px;
   max-width: 400px;
   padding: 50px 30px;
-}
-@media (max-width: 1024px) {
-  .our-masters-section .content-container {
-    padding: 0 20px 50px 20px;
-  }
-  .swiper.ourMastersSwiper .swiper-slide {
-    max-width: 295px;
-  }
 }
 
 .our-masters-section .content-container h2 {
@@ -85,7 +75,7 @@
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.14;
   text-align: center;
   text-transform: uppercase;
@@ -120,4 +110,19 @@
 .detail-button span b {
   font-weight: normal;
   font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  .our-masters-section .content-container {
+    margin: 0 auto;
+  }
+  .our-masters-section .content-container {
+    padding: 30px 20px 50px 20px;
+  }
+  .our-masters-section .content-container h2 {
+    font-size: 20px;
+  }
+  .our-masters-section .content-container h4 {
+    font-size: 12px;
+  }
 }

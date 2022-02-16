@@ -22,6 +22,18 @@
   margin-top: 30px;
 }
 
+.write-us-section .feedback-name div,
+.write-us-section .feedback-question div {
+  position: relative;
+  width: 100%;
+}
+.write-us-section .feedback-name,
+.write-us-section .feedback-question {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .write-us-section form .feedback-textarea {
   margin-top: 20px;
 }
@@ -55,16 +67,25 @@
   border: 1px solid #fff;
 }
 
-.write-us-section input::placeholder,
+.write-us-section label {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  transition: transform 300ms ease;
+  color: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+}
 .write-us-section textarea::placeholder {
   color: rgba(255, 255, 255, 0.8);
 }
-
-.write-us-section .feedback-name,
-.write-us-section .feedback-question {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.write-us-section form input:focus ~ label,
+.write-us-section form input.active ~ label {
+  transform: translate(0, -100%);
 }
 
 #feedback-submit-button {
@@ -91,7 +112,8 @@
 }
 
 @media (min-width: 1024px) {
-  .write-us-section input {
+  .write-us-section .feedback-name div,
+  .write-us-section .feedback-question div {
     width: 48%;
   }
   .write-us-section h2 {

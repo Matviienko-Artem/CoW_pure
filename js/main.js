@@ -55,6 +55,11 @@ const readMoreBtn_catalog = document.querySelector(
 const readMoreBtn_singleTeacher = document.querySelector(
   "#single-teacher_page .teachers-themes .read-more"
 );
+
+const arrReadMoreContainers = Array.from(
+  document.querySelectorAll("div.read_more_container")
+);
+
 const btn_1 = document.querySelector("#acc_btn_1");
 const btn_2 = document.querySelector("#acc_btn_2");
 const btn_3 = document.querySelector("#acc_btn_3");
@@ -73,9 +78,12 @@ const arrHeaderLines = Array.from(headerLines);
 const cartClientDetailsFormInputs = document.querySelectorAll(
   ".contact_details input[type='text']"
 );
+
 const arrCartClientDetailsFormInputs = Array.from(cartClientDetailsFormInputs);
 const popupFormInputs = document.querySelectorAll(".popup input[type='text']");
 const arrPopupFormInputsFormInputs = Array.from(popupFormInputs);
+const writeUsFormInputs = document.querySelectorAll(".write-us-section input");
+const arrWriteUsFormInputsFormInputs = Array.from(writeUsFormInputs);
 
 const pickupRadioBtn = document.querySelector(".radio-container input#pickup");
 const courierRadioBtn = document.querySelector(
@@ -107,6 +115,15 @@ arrCartClientDetailsFormInputs.map((i) =>
 );
 
 arrPopupFormInputsFormInputs.map((i) =>
+  i.addEventListener("change", () => {
+    if (i.value !== "") {
+      i.classList.add("active");
+    } else {
+      i.classList.remove("active");
+    }
+  })
+);
+arrWriteUsFormInputsFormInputs.map((i) =>
   i.addEventListener("change", () => {
     if (i.value !== "") {
       i.classList.add("active");
@@ -151,6 +168,20 @@ const SlideDown = (list, arrow) => {
   arrow.classList.toggle("rotate");
 };
 
+console.log(arrReadMoreContainers);
+
+if (arrReadMoreContainers) {
+  arrReadMoreContainers.map((item) => {
+    const content = item.children[0];
+    const btnArrow = item.children[1].children[0];
+    if (content && btnArrow) {
+      console.log(content);
+      console.log(btnArrow);
+
+      item.addEventListener("click", () => SlideDown(content, btnArrow));
+    }
+  });
+}
 const openPlus = (btn, list) => {
   btn.addEventListener("click", () => {
     const plus = document.querySelector(`#${btn.id} span`);
