@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./css/ObjectiveSection.css">
     <link rel="stylesheet" href="./css/CertificateSection.css">
     <link rel="stylesheet" href="./css/Footer.css">
+	<link rel="stylesheet" href="./css/animate.css">
 
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -356,7 +357,7 @@
 
     <div id="single-teacher_page">
         <div class="our-teachers-section">
-            <div class="teachers-themes">
+            <div class="teachers-themes wow fadeInLeft" data-wow-duration="2s" data-wow-offset="10">
                 <h2>ТАТЬЯНА ЛУБАНОВА</h2>
                 <h4>ОСНОВАТЕЛЬ ШКОЛЫ</h4>
                 <div class="about-teacher-heading">
@@ -408,13 +409,17 @@
                     <p>читать больше</p>
                 </div>
             </div>
-            <div class="teachers-consultations">
-                <select>
-                    <option>Вариант 1: Короткая консультация</option>
-                    <option>Вариант 2: Средняя консультация</option>
-                    <option>Вариант 3: Длинная консультация</option>
-                </select>
-                <div class="select-container">
+
+            <div class="teachers-consultations lubanova wow fadeInUp" data-wow-duration="2s" data-wow-offset="10">
+                <div class="select-wrap">
+                    <select>
+                        <option value="short">Вариант 1: Короткая консультация</option>
+                        <option value="medium">Вариант 2: Средняя консультация</option>
+                        <option value="long">Вариант 3: Длинная консультация</option>
+                    </select>
+                </div>
+            
+                <div id="short" class="select-container wow fadeInRight show">
                     <h5>30 минут</h5>
                     <p>Трактовка сделанной диагностики. Рекомендации.</p>
                     <div class="price-container">
@@ -430,12 +435,48 @@
                         </div>
                     </div>
                 </div>
+                <div id="medium" class="select-container wow fadeInRight">
+                    <h5>60 минут</h5>
+                    <p>Трактовка сделанной диагностики. Рекомендации.</p>
+                    <div class="price-container">
+                        <p>
+                            1500 <span>грн</span>
+                        </p>
+                        <div class="cart-icon">
+                            <svg width="100%" height="100%" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 0.704738C0 0.315535 0.315501 2.27843e-05 0.704715 2.27843e-05H4.93301C5.25221 -0.00270094 5.55689 0.239105 5.62673 0.550582L6.25435 3.5236L6.55167 4.93303L8.48964 14.0944H27.2747L29.4219 4.93303C29.4219 4.93303 29.5363 4.15021 29.7083 3.875C29.8803 3.59979 30.3028 3.5236 30.3028 3.5236C30.7219 3.5266 31.0771 3.97348 30.9855 4.38247L28.519 14.9532C28.4499 15.2611 28.1518 15.5003 27.8363 15.5038H8.78692L9.38153 18.3226H26.4268C26.7991 18.3174 27.1416 18.655 27.1416 19.0274C27.1416 19.3997 26.7991 19.7374 26.4268 19.7321H8.80894C8.40616 19.7523 8.03335 19.3628 8.07118 18.9613L4.36043 1.40945H0.704715C0.315501 1.40945 0 1.09394 0 0.704738ZM9.51366 25.0174C9.51366 23.2743 10.9418 21.8462 12.6849 21.8462C14.428 21.8462 15.8561 23.2743 15.8561 25.0174C15.8561 26.7605 14.428 28.1886 12.6849 28.1886C10.9418 28.1886 9.51366 26.7605 9.51366 25.0174ZM19.3797 25.0174C19.3797 23.2743 20.8079 21.8462 22.5509 21.8462C24.294 21.8462 25.7221 23.2743 25.7221 25.0174C25.7221 26.7605 24.294 28.1886 22.5509 28.1886C20.8079 28.1886 19.3797 26.7605 19.3797 25.0174ZM14.4467 25.0174C14.4467 24.036 13.6662 23.2556 12.6849 23.2556C11.7036 23.2556 10.9231 24.036 10.9231 25.0174C10.9231 25.9988 11.7036 26.7792 12.6849 26.7792C13.6662 26.7792 14.4467 25.9988 14.4467 25.0174ZM24.3127 25.0174C24.3127 24.036 23.5322 23.2556 22.5509 23.2556C21.5696 23.2556 20.7891 24.036 20.7891 25.0174C20.7891 25.9988 21.5696 26.7792 22.5509 26.7792C23.5322 26.7792 24.3127 25.9988 24.3127 25.0174Z"
+                                    fill="#332E4C" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div id="long" class="select-container wow fadeInRight">
+                    <h5>90 минут</h5>
+                    <p>Трактовка сделанной диагностики. Рекомендации.</p>
+                    <div class="price-container">
+                        <p>
+                            2000 <span>грн</span>
+                        </p>
+                        <div class="cart-icon">
+                            <svg width="100%" height="100%" viewBox="0 0 31 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 0.704738C0 0.315535 0.315501 2.27843e-05 0.704715 2.27843e-05H4.93301C5.25221 -0.00270094 5.55689 0.239105 5.62673 0.550582L6.25435 3.5236L6.55167 4.93303L8.48964 14.0944H27.2747L29.4219 4.93303C29.4219 4.93303 29.5363 4.15021 29.7083 3.875C29.8803 3.59979 30.3028 3.5236 30.3028 3.5236C30.7219 3.5266 31.0771 3.97348 30.9855 4.38247L28.519 14.9532C28.4499 15.2611 28.1518 15.5003 27.8363 15.5038H8.78692L9.38153 18.3226H26.4268C26.7991 18.3174 27.1416 18.655 27.1416 19.0274C27.1416 19.3997 26.7991 19.7374 26.4268 19.7321H8.80894C8.40616 19.7523 8.03335 19.3628 8.07118 18.9613L4.36043 1.40945H0.704715C0.315501 1.40945 0 1.09394 0 0.704738ZM9.51366 25.0174C9.51366 23.2743 10.9418 21.8462 12.6849 21.8462C14.428 21.8462 15.8561 23.2743 15.8561 25.0174C15.8561 26.7605 14.428 28.1886 12.6849 28.1886C10.9418 28.1886 9.51366 26.7605 9.51366 25.0174ZM19.3797 25.0174C19.3797 23.2743 20.8079 21.8462 22.5509 21.8462C24.294 21.8462 25.7221 23.2743 25.7221 25.0174C25.7221 26.7605 24.294 28.1886 22.5509 28.1886C20.8079 28.1886 19.3797 26.7605 19.3797 25.0174ZM14.4467 25.0174C14.4467 24.036 13.6662 23.2556 12.6849 23.2556C11.7036 23.2556 10.9231 24.036 10.9231 25.0174C10.9231 25.9988 11.7036 26.7792 12.6849 26.7792C13.6662 26.7792 14.4467 25.9988 14.4467 25.0174ZM24.3127 25.0174C24.3127 24.036 23.5322 23.2556 22.5509 23.2556C21.5696 23.2556 20.7891 24.036 20.7891 25.0174C20.7891 25.9988 21.5696 26.7792 22.5509 26.7792C23.5322 26.7792 24.3127 25.9988 24.3127 25.0174Z"
+                                    fill="#332E4C" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="conditions-consultations"
                     data-title="Записаться на консультацию можно, связавшись с нами, или заполнив форму. После отправки заявки мы свяжемся с вами для определения удобной даты и времени.">
                     условия консультации
                 </div>
             </div>
-            <div class="teachers-photo lubanova"></div>
+
+            <div class="teachers-photo lubanova wow fadeInRight" data-wow-duration="2s" data-wow-offset="10">
+                <img src="./images/lubanova_tatiana.jpg" alt="">
+            </div>
         </div>
 
         <div class="delimiter">
@@ -451,32 +492,29 @@
         </div>
 
         <div class="school-history-section">
-            <div class="swiper historySwiper">
+            <div class="swiper historySwiper wow fadeInUp" data-wow-duration="2s" data-wow-offset="10">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="slide-container">
-                            <div class="circle-container right">
-                                <div class="circle-border">
+                        <div class="slide-container once right">
+                            <div class="circle-container ">
+                                <div class="circle-border column">
                                     <h5>2010</h5>
                                     <h5>-</h5>
                                     <h5>2014</h5>
                                 </div>
                             </div>
                             <h4>Холотропное дыхание</h4>
-                            <p>
-                                прошла обучение 1 и 2 ступени Reberfing, Holotropic
-                                Breathing (ребёфинг, холотнопное дыхание) в International
-                                Breathwork Foundation (Международная Ассоциация Свободного
-                                Дыхания). Холотропное дыхание – метод трансперсональной
-                                психотерапии, заключающийся в гипервентиляции лёгких.
+                            <p class="spec_width">
+                                прошла обучение 1 и 2 ступени Reberfing, Holotropic Breathing (ребёфинг, холотнопное дыхание) в International Breathwork
+                                Foundation (Международная Ассоциация Свободного Дыхания). Холотропное дыхание – метод трансперсональной психотерапии,
+                                заключающийся в гипервентиляции лёгких.
                             </p>
                         </div>
                     </div>
-            
                     <div class="swiper-slide">
-                        <div class="slide-container">
-                            <div class="circle-container right left">
-                                <div class="circle-border">
+                        <div class="slide-container once right left_special">
+                            <div class="circle-container ">
+                                <div class="circle-border column">
                                     <h5>2011</h5>
                                     <h5>-</h5>
                                     <h5>2012</h5>
@@ -484,40 +522,65 @@
                             </div>
                             <h4>Та́нтра</h4>
                             <p>
-                                прохождение сессий по Тантрологии. это эзотерические
-                                практики и инициации, которые приводят к слиянию Инь и Ян,
-                                внутреннему и внешнему, Души и Материи, и – рождению
-                                дополнительной энергии с материализацией в настоящем, и
-                                выходом этой энергии на более высокий уровень развития и
-                                сознания.
+                            прохождение сессий по Тантрологии. это эзотерические практики и инициации, которые приводят к слиянию Инь и Ян,
+                            внутреннему и внешнему, Души и Материи, и – рождению дополнительной энергии с материализацией в настоящем, и выходом
+                            этой энергии на более высокий уровень развития и сознания.
                             </p>
                         </div>
                     </div>
-            
                     <div class="swiper-slide">
-                        <div class="slide-container">
-                            <div class="circle-container left">
+                        <div class="slide-container once right left">
+                            <div class="circle-container ">
                                 <div class="circle-border">
                                     <h5>2013</h5>
                                 </div>
                             </div>
                             <h4>Инициация рейки</h4>
                             <p>
-                                обучение на базовом курсе «Universal Healing TAO system» in
-                                Universal Healing Tao center in Chiang Mai, Thailand.
-                                Инициация рейки 1 ступень в International Association of
-                                Reiki.
+                                обучение на базовом курсе «Universal Healing TAO system» in Universal Healing Tao center in Chiang Mai, Thailand.
+                                Инициация рейки 1 ступень в International Association of Reiki.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-container once right left">
+                            <div class="circle-container ">
+                                <div class="circle-border">
+                                    <h5>2019</h5>
+                                </div>
+                            </div>
+                            <h4>Активизация</h4>
+                            <p>
+                                The Master officially directed the Chapelle-Musique. He was a
+                                member of the nobility and
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-container once left">
+                            <div class="circle-container ">
+                                <div class="circle-border">
+                                    <h5>2019</h5>
+                                </div>
+                            </div>
+                            <h4>Активизация</h4>
+                            <p>
+                                The Master officially directed the Chapelle-Musique. He was a
+                                member of the nobility and
                             </p>
                         </div>
                     </div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
 
         <div class="objective-slider">
             <h4>Основные сферы работы:</h4>
 
-            <div class="swiper objectiveSwiper">
+            <div class="swiper objectiveSwiper wow fadeInRight" data-wow-duration="2s" data-wow-offset="10">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="objective-slider-item">
@@ -567,29 +630,47 @@
                     </div>
 
                 </div>
+                <div class="swiper-pagination objective-pagination"></div>
             </div>
+        </div>
+
+        <div class="delimiter">
+            <svg preserveAspectRatio="none" width="1440" height="951" viewBox="0 0 1440 951" fill="none"
+                xmlns="http://www.w3.org/2000/svg" class="lineSVG">
+                <path opacity="0.54"
+                    d="M1444.41 172.5C1443.79 363.197 1044.06 725.744 750.235 553.003C300.376 288.525 -110.333 252.537 -462.086 652.727"
+                    stroke="#B8C3CB" strokeWidth="2"></path>
+                <path opacity="0.54"
+                    d="M1444.41 172.5C1443.79 363.197 1044.06 725.744 750.235 553.003C300.376 288.525 -110.333 252.537 -462.086 652.727"
+                    stroke="#ffffff" strokeWidth="2"></path>
+            </svg>
         </div>
 
         <div class="certificate-section">
             <div class="container_for_slider">
-
-                <div class="swiper certificateSwiper">
+                <div class="swiper certificateSwiper wow fadeInUp" data-wow-duration="2s" data-wow-offset="10">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div id="345" class="article_slider_item">
-                                <div class="article-photo"></div>
+                                <div class="article-photo">
+                                    <img src="./images/certificate.jpg" alt="">
+                                </div>
                             </div>
                         </div>
                 
                         <div class="swiper-slide">
                             <div id="345" class="article_slider_item">
-                                <div class="article-photo"></div>
+                                <div class="article-photo">
+                                    <img src="./images/certificate.jpg" alt="">
+                                </div>
                             </div>
                         </div>
                 
                         <div class="swiper-slide">
                             <div id="345" class="article_slider_item">
-                                <div class="article-photo"></div>
+                                <div class="article-photo">
+                                    <img src="./images/certificate.jpg" alt="">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -781,13 +862,21 @@
 
     <script>
         const historySwiper = new Swiper('.historySwiper', {
-                slidesPerView: 1,
-                loop: false,
-                breakpoints: {
-                    1024: {
-                       slidesPerView: 3,
-                    }
+            slidesPerView: 1,
+            loop: false,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
                 }
+            },
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
+            },
          });
 
         const objectiveSwiper = new Swiper('.objectiveSwiper', {
@@ -805,23 +894,26 @@
         });
 
          const certificateSwiper = new Swiper('.certificateSwiper', {
-                // loop: true,
-             effect: "coverflow",
-             grabCursor: true,
-             centeredSlides: true,
-             slidesPerView: "auto",
-             coverflowEffect: {
-                 rotate: 30,
-                 stretch: 0,
-                 depth: 700,
-                 modifier: 1,
-                 slideShadows: false,
-             },
-             scrollbar: {
-                 el: '.swiper-scrollbar',
-                 draggable: true,
-             },
+            loop: false,
+            grabCursor: true,
+            initialSlide: 1,
+            spaceBetween: 15,
+            centeredSlides: true,
+            slidesPerView: 1.5,
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                draggable: true,
+            },
+            breakpoints: {
+                 1024: {
+                     slidesPerView:  1.8,
+                 }
+             }
             });
+    </script>
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
     </script>
 </body>
 </html>

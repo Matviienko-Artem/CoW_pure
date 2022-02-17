@@ -168,8 +168,6 @@ const SlideDown = (list, arrow) => {
   arrow.classList.toggle("rotate");
 };
 
-console.log(arrReadMoreContainers);
-
 if (arrReadMoreContainers) {
   arrReadMoreContainers.map((item) => {
     const content = item.children[0];
@@ -224,4 +222,44 @@ if (btn_2) {
 
 if (btn_3) {
   openPlus(btn_3, acc_p_3);
+}
+
+// изменение контента при выборе селекта в секции учителя
+const selectLubanova = document.querySelector(
+  ".teachers-consultations.lubanova .select-wrap select"
+);
+const selectContentLubanova = document.querySelectorAll(
+  ".teachers-consultations.lubanova .select-container"
+);
+const arrselectContentLubanova = Array.from(selectContentLubanova);
+
+const selectMilovidova = document.querySelector(
+  ".teachers-consultations.milovidova .select-wrap select"
+);
+const selectContentMilovidova = document.querySelectorAll(
+  ".teachers-consultations.milovidova .select-container"
+);
+const arrSelectContentMilovidova = Array.from(selectContentMilovidova);
+
+if (selectLubanova) {
+  selectLubanova.addEventListener("change", (e) => {
+    arrselectContentLubanova.map((i) => {
+      if (e.target.value === i.id) {
+        i.classList.add("show");
+      } else {
+        i.classList.remove("show");
+      }
+    });
+  });
+}
+if (selectMilovidova) {
+  selectMilovidova.addEventListener("change", (e) => {
+    arrSelectContentMilovidova.map((i) => {
+      if (e.target.value === i.id) {
+        i.classList.add("show");
+      } else {
+        i.classList.remove("show");
+      }
+    });
+  });
 }

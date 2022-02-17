@@ -209,4 +209,11 @@
     align-items: center;
     justify-content: center;
   }
+
+  #single-teacher_page .objective-slider-item .based-on p {
+    font-size: 16px;
+  }
+  #single-teacher_page .swiper.objectiveSwiper .objective-pagination {
+    bottom: 30px;
+  }
 }

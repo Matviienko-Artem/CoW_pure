@@ -1,5 +1,5 @@
 .school-history-section {
-  padding: 100px 0;
+  padding: 70px 10px;
 
   background-color: #fff;
 
@@ -7,6 +7,7 @@
 }
 
 .school-history-section h4 {
+  margin-bottom: 20px;
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -38,6 +39,10 @@
 
 .school-history-section .slide-container.once {
   margin-top: 160px;
+}
+
+#single-teacher_page .school-history-section .slide-container.once {
+  margin-top: 0;
 }
 
 .school-history-section .circle-container {
@@ -165,11 +170,15 @@
   color: #1f1f1f;
 }
 .school-history-section .historySwiper {
-  margin-top: 30px;
+  padding-top: 30px;
 }
+.school-history-section .historySwiper.consultations {
+  margin-top: 80px;
+}
+
 .school-history-section .historySwiper .swiper-pagination {
   width: auto;
-  top: 20%;
+  top: 30%;
   right: 33%;
   left: auto;
   bottom: auto;
@@ -179,6 +188,13 @@
   font-weight: normal;
   font-size: 24px;
   line-height: 100%;
+}
+#single-teacher_page .school-history-section .historySwiper .swiper-pagination {
+  top: 5%;
+}
+.school-history-section .historySwiper.consultations .swiper-pagination {
+  top: 13px;
+  right: 68px;
 }
 .school-history-section
   .historySwiper
@@ -199,7 +215,7 @@
 
 .school-history-section .historySwiper .swiper-button-next,
 .school-history-section .historySwiper .swiper-button-prev {
-  top: 236px;
+  top: 267px;
   width: 52px;
   height: 52px;
   color: #332e4c;
@@ -207,6 +223,14 @@
   border-radius: 50%;
   border: 1px dashed #332e4c;
   transition: all 400ms ease;
+}
+
+#single-teacher_page .school-history-section .historySwiper .swiper-button-next,
+#single-teacher_page
+  .school-history-section
+  .historySwiper
+  .swiper-button-prev {
+  top: 107px;
 }
 .school-history-section .historySwiper .swiper-button-next:hover,
 .school-history-section .historySwiper .swiper-button-next:focus,
@@ -220,6 +244,11 @@
 .school-history-section .historySwiper .swiper-button-prev {
   left: 32%;
 }
+.school-history-section .historySwiper.consultations .swiper-button-next,
+.school-history-section .historySwiper.consultations .swiper-button-prev {
+  top: 76px;
+}
+
 .school-history-section
   .historySwiper
   .swiper-button-next.swiper-button-disabled,
@@ -233,6 +262,12 @@
   font-size: 20px;
 }
 @media (max-width: 1024px) {
+  .school-history-section h2 {
+    font-size: 30px;
+  }
+  .school-history-section .slide-container p {
+    font-size: 16px;
+  }
   .school-history-section .historySwiper .swiper-pagination {
     top: 20%;
     right: 40px;

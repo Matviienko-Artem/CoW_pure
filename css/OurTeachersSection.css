@@ -68,6 +68,7 @@
 .our-teachers-section .teachers-themes p {
   font-size: 14px;
   font-weight: 300;
+  letter-spacing: normal;
   text-transform: lowercase;
 }
 
@@ -76,27 +77,56 @@
 }
 
 .our-teachers-section .teachers-consultations {
+  padding: 40px;
   width: 100%;
 }
 
 .our-teachers-section .teachers-consultations.second {
-  padding: 40px;
   order: 3;
 }
 
 .our-teachers-section .teachers-consultations select {
-  padding: 15px 5px;
-  margin-bottom: 20px;
+  padding: 15px 25px 15px 10px;
   width: 100%;
   outline: none;
   border: 1px solid #1f1f1f;
   background-color: #b8c3cb;
   font-size: 12px;
   text-transform: uppercase;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.our-teachers-section .teachers-consultations .select-wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+.our-teachers-section .teachers-consultations .select-wrap::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 45%;
+  right: 10px;
+  width: 13px;
+  height: 7px;
+  background-image: url("../images/arrow_down.svg");
 }
 
 .our-teachers-section .teachers-consultations.second select {
   background-color: #d9d9d1;
+}
+
+.our-teachers-section .teachers-consultations.lubanova .select-container,
+.our-teachers-section .teachers-consultations.milovidova .select-container {
+  display: none;
+}
+
+.our-teachers-section .teachers-consultations.lubanova .select-container.show,
+.our-teachers-section
+  .teachers-consultations.milovidova
+  .select-container.show {
+  display: block;
 }
 
 .our-teachers-section .teachers-consultations h5 {
@@ -112,6 +142,7 @@
   width: 18px;
   height: 18px;
   background-image: url("../images/clock.svg");
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -119,6 +150,7 @@
   margin: 20px 0;
   font-size: 14px;
   text-transform: lowercase;
+  letter-spacing: 0;
 }
 
 .our-teachers-section .teachers-consultations .price-container {
@@ -155,26 +187,28 @@
   background-color: #332e4c;
 }
 
-.price-container .cart-icon:hover path {
+.price-container .cart-icon:hover path,
+.price-container .cart-icon:focus path {
   fill: #fff;
 }
 
 .our-teachers-section .teachers-photo {
-  height: 630px;
-  width: 100%;
-  padding: 0 10px;
+  padding: 90px 40px 20px 40px;
   background-repeat: no-repeat;
+}
+.our-teachers-section .teachers-photo img {
+  display: block;
 }
 
 .our-teachers-section .teachers-photo.lubanova {
-  background-image: url("../images/lubanova_tatiana.jpg");
-  background-position: center right 60px;
+  /* background-image: url("../images/lubanova_tatiana.jpg");
+  background-position: center right 60px; */
 }
 
 .our-teachers-section .teachers-photo.milovidova {
   order: 1;
-  background-image: url("../images/milovidova_natalia.jpg");
-  background-position: center left 60px;
+  /* background-image: url("../images/milovidova_natalia.jpg");
+  background-position: center left 60px; */
 }
 
 @media (max-width: 1024px) {
@@ -185,17 +219,45 @@
   .our-teachers-section.second {
     background-image: linear-gradient(to top, #fff 60%, #d9d9d1 40%);
   }
+  .our-teachers-section .teachers-photo {
+    padding: 90px 10px 20px 10px;
+  }
   .our-teachers-section .teachers-photo.lubanova {
-    background-position: center;
     order: 1;
   }
   .our-teachers-section .teachers-themes {
     padding: 10px;
     order: 2;
   }
+  .our-teachers-section .teachers-themes h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .our-teachers-section .teachers-themes h4 {
+    text-align: center;
+  }
+  .our-teachers-section .teachers-themes p {
+    font-size: 16px;
+  }
+  .our-teachers-section .teachers-themes .detail-button {
+    font-size: 14px;
+  }
   .our-teachers-section .teachers-consultations {
     padding: 40px 10px;
     order: 3;
+  }
+
+  .our-teachers-section .teachers-consultations h5 {
+    margin-left: 35px;
+    font-size: 18px;
+  }
+  .our-teachers-section .teachers-consultations p {
+    font-size: 16px;
+  }
+
+  .our-teachers-section .teachers-consultations h5::before {
+    width: 27px;
+    height: 27px;
   }
 
   .our-teachers-section .teachers-consultations.second {
@@ -238,14 +300,16 @@
     border: 1px solid #b8c3cb;
     background-color: #b8c3cb;
   }
-  .price-container .cart-icon:hover {
+  .price-container .cart-icon:hover,
+  .price-container .cart-icon:focus {
     border: 1px solid #b8c3cb;
     background-color: #fff;
   }
   .price-container .cart-icon path {
     fill: #fff;
   }
-  .price-container .cart-icon:hover path {
+  .price-container .cart-icon:hover path,
+  .price-container .cart-icon:focus path {
     fill: #b8c3cb;
   }
 
@@ -256,14 +320,16 @@
     border: 1px solid #d9d9d1;
     background-color: #d9d9d1;
   }
-  .price-container.second .cart-icon:hover {
+  .price-container.second .cart-icon:hover,
+  .price-container.second .cart-icon:focus {
     border: 1px solid #d9d9d1;
     background-color: #fff;
   }
   .price-container.second .cart-icon path {
     fill: #fff;
   }
-  .price-container.second .cart-icon:hover path {
+  .price-container.second .cart-icon:hover path,
+  .price-container.second .cart-icon:focus path {
     fill: #d9d9d1;
   }
 }
