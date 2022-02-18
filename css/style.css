@@ -1154,9 +1154,9 @@ button:focus {
 .wrapper_usefull_page .wrapper_courses .Myswiper-button-next {
   margin-left: 85px;
 }
-/* .swiper {
+.swiper.mySwiper {
   padding-bottom: 50px !important;
-} */
+}
 .swiper.mySwiper .swiper-scrollbar {
   background: rgba(255, 255, 255, 0.2);
   width: 93% !important;

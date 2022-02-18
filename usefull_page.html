@@ -7,6 +7,7 @@
 	
 	<link rel="stylesheet" href="./css/Header.css">
 	<link rel="stylesheet" href="./css/delimiter.css">
+	<link rel="stylesheet" href="./css/ArticleSection.css">
 	<link rel="stylesheet" href="./css/Footer.css">
 	<link rel="stylesheet" href="./css/style.css">
 	
@@ -1192,6 +1193,112 @@
 		</div>
 	</div>
 
+	<div class="article-masters-section usefull_page">
+		<h2 class="title">читать больше</h2>
+		<div class="container_for_slider">
+	
+			<div class="swiper articleSwiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div id="345" class="article_slider_item  wow fadeIn" data-wow-duration="2s" data-wow-offset="10">
+							<div class="article-photo">
+								<img width="100%" height="100%" src="./images/article_1.jpg" alt="">
+							</div>
+							<div class="content-container">
+								<h4>Статьи</h4>
+								<h2>Высшая магия</h2>
+								<p>
+									Диагностика по стихийным прошивкам — это определение
+									способностей и опыта удерживать, фиксировать и использовать
+									свои качества по таким параметрам:
+								</p>
+								<a href="#" class="detail-button">
+									подробнее
+									<span>
+										&#11049;&#11049;<b>&#10230;</b>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div id="345" class="article_slider_item wow fadeIn" data-wow-duration="2s" data-wow-offset="10">
+							<div class="article-photo">
+								<img width="100%" height="100%" src="./images/article_1.jpg" alt="">
+							</div>
+							<div class="content-container">
+								<h4>Статьи</h4>
+								<h2>Высшая магия</h2>
+								<p>
+									Диагностика по стихийным прошивкам — это определение
+									способностей и опыта удерживать, фиксировать и использовать
+									свои качества по таким параметрам:
+								</p>
+								<a href="#" class="detail-button">
+									подробнее
+									<span>
+										&#11049;&#11049;<b>&#10230;</b>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div id="345" class="article_slider_item wow fadeIn" data-wow-duration="2s" data-wow-offset="10">
+							<div class="article-photo">
+								<img width="100%" height="100%" src="./images/article_1.jpg" alt="">
+							</div>
+							<div class="content-container">
+								<h4>Статьи</h4>
+								<h2>Высшая магия</h2>
+								<p>
+									Диагностика по стихийным прошивкам — это определение
+									способностей и опыта удерживать, фиксировать и использовать
+									свои качества по таким параметрам:
+								</p>
+								<a href="#" class="detail-button">
+									подробнее
+									<span>
+										&#11049;&#11049;<b>&#10230;</b>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div id="345" class="article_slider_item wow fadeIn" data-wow-duration="2s" data-wow-offset="10">
+							<div class="article-photo">
+								<img width="100%" height="100%" src="./images/article_1.jpg" alt="">
+							</div>
+							<div class="content-container">
+								<h4>Статьи</h4>
+								<h2>Высшая магия</h2>
+								<p>
+									Диагностика по стихийным прошивкам — это определение
+									способностей и опыта удерживать, фиксировать и использовать
+									свои качества по таким параметрам:
+								</p>
+								<a href="#" class="detail-button">
+									подробнее
+									<span>
+										&#11049;&#11049;<b>&#10230;</b>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-next">
+					<div class="circle"></div>
+				</div>
+				<div class="swiper-button-prev">
+					<div class="circle"></div>
+				</div>
+				<div class="swiper-scrollbar"></div>
+			</div>
+		</div>
+	</div>
+
 	<div id="footer">
 		<div class="upper-footer">
 			<div class="logo">
@@ -1401,6 +1508,23 @@
 				}
 			}
 		});
+
+		const articleSwiper = new Swiper('.articleSwiper', {
+				slidesPerView: "auto",
+				spaceBetween: 100,
+				centeredSlides: true,
+				initialSlide: 1,
+				// loop: true,
+				grabCursor: true,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				scrollbar: {
+					el: '.swiper-scrollbar',
+					draggable: true,
+				},
+			});
     </script>
 </body>
 </html>
