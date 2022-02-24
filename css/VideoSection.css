@@ -8,7 +8,7 @@
 }
 
 .video-section .text-column {
-  max-width: 30%;
+  max-width: 25%;
   padding-top: 200px;
 
   font-family: "Roboto", sans-serif;
@@ -31,7 +31,7 @@
 }
 .video-section .delimiter {
   position: absolute;
-  top: 200px;
+  bottom: 350px;
 }
 .video-section .video-column p {
   margin-bottom: 20px;

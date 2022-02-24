@@ -1,6 +1,6 @@
 #calendar_page {
   padding: 100px 10px 0 10px;
-  min-height: calc(100vh - 293px);
+  min-height: calc(100vh - 213px);
   background-image: linear-gradient(
     to top,
     #fff calc(100% - 200px),
@@ -42,9 +42,10 @@
 .__select__title {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   width: 100%;
   height: 100%;
-  padding: 8px 16px;
+  padding: 9px 80px 9px 0px;
 
   font-family: "Cormorant", serif;
   font-weight: bold;
@@ -183,7 +184,8 @@
 }
 
 .calendar_body .asside-container a {
-  padding-right: 30px;
+  /* padding-right: 30px; */
+  justify-content: space-between;
   margin-top: 30px;
   position: relative;
   width: 100%;
@@ -219,7 +221,7 @@
   color: #1f1f1f;
 }
 .calendar_body .calendar-container table thead th {
-  padding: 5px 0;
+  padding: 5px 0 20px 0;
 }
 .calendar_body .calendar-container table tbody td {
   padding: 10px;
@@ -243,9 +245,18 @@
   background-color: #b8c3cb;
 }
 
+.calendar_body .calendar-container table tbody td.lessons.special img {
+  margin-left: 5px;
+}
+
 .calendar-container table tbody td ul {
   padding: 0;
   list-style: none;
+}
+
+#calendar_page .detail-button rect,
+#calendar_page .detail-button path {
+  fill: #fff;
 }
 
 @media (min-width: 1024px) {
@@ -263,6 +274,13 @@
     padding: 45px 35px;
     width: 300px;
     background-color: #332e4c;
+  }
+  .calendar_body .asside-container .delimiter svg {
+    width: 100%;
+    min-width: 300px;
+    height: 250px;
+    top: -50px;
+    left: -35px;
   }
   .calendar_body .asside-container h2 {
     font-size: 36px;

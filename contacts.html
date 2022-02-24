@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./css/delimiter.css">
     <link rel="stylesheet" href="./css/Footer.css">
     <link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/animate.css">
 
     <title>Document</title>
 </head>
@@ -328,9 +329,13 @@
                 <div class="cart-footing">
                     <a href="#" class="detail-button">
                         продолжить покупки
-                        <span>
-                            &#11049;&#11049;<b>&#10230;</b>
-                        </span>
+                        <svg width="35" height="4" viewBox="0 0 35 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect y="2.41406" width="2" height="2" transform="rotate(-45 0 2.41406)" fill="#332E4C" />
+                            <rect x="5" y="2.41406" width="2" height="2" transform="rotate(-45 5 2.41406)" fill="#332E4C" />
+                            <path
+                                d="M34.1768 2.17678C34.2744 2.07915 34.2744 1.92085 34.1768 1.82322L32.5858 0.232233C32.4882 0.134602 32.3299 0.134602 32.2322 0.232233C32.1346 0.329864 32.1346 0.488155 32.2322 0.585786L33.6464 2L32.2322 3.41421C32.1346 3.51184 32.1346 3.67014 32.2322 3.76777C32.3299 3.8654 32.4882 3.8654 32.5858 3.76777L34.1768 2.17678ZM13 2.25H34V1.75H13V2.25Z"
+                                fill="#332E4C" />
+                        </svg>
                     </a>
     
                     <a href="#" class="purchase-button">
@@ -351,11 +356,11 @@
 
     <div id="contacts_page">
         <section class="upper-section">
-            <div class="address-container">
+            <div class="address-container wow fadeInLeft" data-wow-duration="1s" data-wow-offset="10">
                 <div class="address-section">
                     <div class="our-address-link">
                         <h4>кликни чтобы проложить маршрут к нам</h4>
-                        <a href="https://goo.gl/maps/o19Yoc33cfaadxpS6" target="_blank" rel="noreferrer">
+                        <a href="https://goo.gl/maps/p8wvr6KEjtGSApSA7" target="_blank" rel="noreferrer">
                             <div class="contacts-icon">
                                 <div class="icon-circle">
                                     <svg width="20" height="27" viewBox="0 0 20 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -372,15 +377,20 @@
                     </div>
                 
                     <a href="tel:+380939141108">+38 (093) 914 11 08</a>
+                    <a href="mailto:mail@circleofwhite.com">mail@circleofwhite.com</a>
                     <p>Киев, пр-т Воздухофлотский, 25, 2 подъезд, 2 эт., оф. 14</p>
                 
                     <h2>ждем тебя в гости</h2>
                 </div>
             </div>
-            <div class="map-container"></div>
+            <div class="map-container  wow fadeInRight" data-wow-duration="1s" data-wow-offset="10">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1270.6772665575122!2d30.47339019111597!3d50.43449662620637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf23363a8961%3A0xe097c6c9fb760c8a!2z0KjQutC-0LvQsCDRjdC90LXRgNCz0LXRgtC40YfQtdGB0LrQuNGFINC_0YDQsNC60YLQuNC6ICJDaXJjbGUgb2YgV2hpdGUi!5e0!3m2!1sru!2sua!4v1645440740801!5m2!1sru!2sua"
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </section>
         <section class="lower-section">
-            <div class="write-us-container">
+            <div class="write-us-container wow fadeInLeft" data-wow-duration="1s" data-wow-offset="10">
                 <div class="write-us-section">
                     <h2>НАПИШИТЕ НАМ и МЫ ОБЯЗАТЕЛЬНО ОТВЕТИМ ВАМ</h2>
                     <form id="feedback-form">
@@ -410,14 +420,18 @@
                         </div>
                         <button type="submit" id="feedback-submit-button" class="detail-button">
                             Отправить
-                            <span>
-                                &#11049;&#11049;<b>&#10230;</b>
-                            </span>
+                            <svg width="35" height="4" viewBox="0 0 35 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect y="2.41406" width="2" height="2" transform="rotate(-45 0 2.41406)" fill="#332E4C" />
+                                <rect x="5" y="2.41406" width="2" height="2" transform="rotate(-45 5 2.41406)" fill="#332E4C" />
+                                <path
+                                    d="M34.1768 2.17678C34.2744 2.07915 34.2744 1.92085 34.1768 1.82322L32.5858 0.232233C32.4882 0.134602 32.3299 0.134602 32.2322 0.232233C32.1346 0.329864 32.1346 0.488155 32.2322 0.585786L33.6464 2L32.2322 3.41421C32.1346 3.51184 32.1346 3.67014 32.2322 3.76777C32.3299 3.8654 32.4882 3.8654 32.5858 3.76777L34.1768 2.17678ZM13 2.25H34V1.75H13V2.25Z"
+                                    fill="#332E4C" />
+                            </svg>
                         </button>
                     </form>
                 </div>
             </div>
-            <div class="paint-container"></div>
+            <div class="paint-container wow fadeInRight" data-wow-duration="1s" data-wow-offset="10"></div>
         </section>
     </div>
 
@@ -596,6 +610,9 @@
     
     <script src="./js/main.js"></script>
     <script src="./js/header.js"></script>
-
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 </html>

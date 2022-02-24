@@ -87,30 +87,6 @@
   color: #1f1f1f;
 }
 
-.detail-button {
-  display: inline-block;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 14px;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
-.detail-button:hover span {
-  transform: translateX(50%);
-}
-
-.detail-button span {
-  display: inline-block;
-  margin-left: 10px;
-  transition: transform 500ms ease;
-}
-
-.detail-button span b {
-  font-weight: normal;
-  font-size: 16px;
-}
 
 @media (max-width: 1024px) {
   .our-masters-section .content-container {

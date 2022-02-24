@@ -6,6 +6,10 @@
   min-height: 380px;
 }
 
+#single-teacher_page .school-history-section {
+  padding: 0px 10px 50px 10px;
+}
+
 .school-history-section h4 {
   margin-bottom: 20px;
   font-family: "Roboto", sans-serif;
@@ -226,10 +230,9 @@
 }
 
 #single-teacher_page .school-history-section .historySwiper .swiper-button-next,
-#single-teacher_page
-  .school-history-section
-  .historySwiper
-  .swiper-button-prev {
+#single-teacher_page .school-history-section .historySwiper .swiper-button-prev,
+#our_teachers_page .school-history-section .historySwiper .swiper-button-prev,
+#our_teachers_page .school-history-section .historySwiper .swiper-button-next {
   top: 107px;
 }
 .school-history-section .historySwiper .swiper-button-next:hover,
@@ -262,11 +265,15 @@
   font-size: 20px;
 }
 @media (max-width: 1024px) {
+  #single-teacher_page .school-history-section {
+    padding: 0 0 20px 10px;
+  }
   .school-history-section h2 {
     font-size: 30px;
   }
   .school-history-section .slide-container p {
     font-size: 16px;
+    text-align: left;
   }
   .school-history-section .historySwiper .swiper-pagination {
     top: 20%;

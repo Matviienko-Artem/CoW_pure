@@ -67,7 +67,7 @@
 
 .our-teachers-section .teachers-themes p {
   font-size: 14px;
-  font-weight: 300;
+
   letter-spacing: normal;
   text-transform: lowercase;
 }
@@ -214,10 +214,10 @@
 @media (max-width: 1024px) {
   .our-teachers-section {
     flex-direction: column;
-    background-image: linear-gradient(to top, #fff 60%, #b8c3cb 40%);
+    background-image: linear-gradient(to bottom, #b8c3cb 450px, #fff 1%);
   }
   .our-teachers-section.second {
-    background-image: linear-gradient(to top, #fff 60%, #d9d9d1 40%);
+    background-image: linear-gradient(to bottom, #d9d9d1 450px, #fff 1%);
   }
   .our-teachers-section .teachers-photo {
     padding: 90px 10px 20px 10px;
@@ -238,6 +238,7 @@
   }
   .our-teachers-section .teachers-themes p {
     font-size: 16px;
+    font-weight: 300;
   }
   .our-teachers-section .teachers-themes .detail-button {
     font-size: 14px;
@@ -245,6 +246,7 @@
   .our-teachers-section .teachers-consultations {
     padding: 40px 10px;
     order: 3;
+    z-index: 2;
   }
 
   .our-teachers-section .teachers-consultations h5 {
@@ -253,6 +255,7 @@
   }
   .our-teachers-section .teachers-consultations p {
     font-size: 16px;
+    font-weight: 300;
   }
 
   .our-teachers-section .teachers-consultations h5::before {

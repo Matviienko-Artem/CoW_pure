@@ -227,9 +227,7 @@
   text-align: right;
   color: #000000;
 }
-button.detail-button b {
-  font-size: 16px;
-}
+
 .cart_page .cart_container {
   width: 100%;
   max-width: 580px;

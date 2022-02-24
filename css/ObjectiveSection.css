@@ -15,9 +15,9 @@
 
 .objective-section .delimiter {
   position: absolute;
+  width: 65%;
   top: 100px;
-  left: 0;
-
+  left: 693px;
   height: 0;
 }
 

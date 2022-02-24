@@ -58,6 +58,14 @@
 .write-us-section input {
   width: 100%;
 }
+.write-us-section input:-webkit-autofill,
+.write-us-section input:-webkit-autofill:hover,
+.write-us-section input:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #fff;
+
+  /* background-position: #332e4c !important; */
+}
 .write-us-section textarea {
   width: 100%;
   max-width: 100%;
@@ -85,7 +93,7 @@
 }
 .write-us-section form input:focus ~ label,
 .write-us-section form input.active ~ label {
-  transform: translate(0, -100%);
+  transform: translate(0, -150%);
 }
 
 #feedback-submit-button {
@@ -93,7 +101,7 @@
   height: 35px;
   border: none;
   cursor: pointer;
-  background-color: inherit;
+  background-color: #332e4c;
 
   font-family: "Roboto", sans-serif;
   font-weight: normal;
@@ -103,12 +111,9 @@
   text-transform: uppercase;
   color: #fff;
 }
-#feedback-submit-button span {
-  margin-left: 10px;
-}
-
-#feedback-submit-button span b {
-  font-size: 16px;
+#feedback-submit-button svg rect,
+#feedback-submit-button svg path {
+  fill: #fff;
 }
 
 @media (min-width: 1024px) {

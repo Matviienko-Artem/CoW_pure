@@ -30,7 +30,7 @@ button:focus {
   max-width: 1360px;
   margin: 0 auto;
 }
-.myBtn {
+.detail-button {
   color: #1f1f1f;
   display: inline-flex;
   align-items: center;
@@ -41,17 +41,17 @@ button:focus {
   text-transform: uppercase;
   text-decoration: none;
 }
-.myBtn:hover span {
+.detail-button:hover span {
   transform: translateX(50%);
 }
-.myBtn span {
+.detail-button span {
   display: flex;
   align-items: baseline;
   justify-content: center;
   margin-left: 10px;
   transition: transform 500ms ease;
 }
-.myBtn b {
+.detail-button b {
   font-weight: normal;
   font-size: 1.3em;
   position: relative;
@@ -567,7 +567,7 @@ button:focus {
   .usefull_content
   .usefull_content_item
   .usefull_item_info
-  .myBtn {
+  .detail-button {
   margin-top: 40px;
   text-transform: uppercase;
   border: none;
@@ -1172,7 +1172,9 @@ button:focus {
   animation: dash 5s linear normal 1 forwards;
 }
 .detail-button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-size: 12px;
@@ -1180,12 +1182,12 @@ button:focus {
   text-transform: uppercase;
   text-decoration: none;
 }
-.detail-button span {
-  display: inline-block;
+.detail-button svg {
   transition: transform 500ms ease;
   margin-left: 10px;
+  margin-bottom: 2px;
 }
-.detail-button:hover span {
+.detail-button:hover svg {
   transform: translateX(50%);
 }
 @-webkit-keyframes dash {
@@ -1563,7 +1565,7 @@ button:focus {
     .usefull_content
     .usefull_content_item
     .usefull_item_info
-    .myBtn {
+    .detail-button {
     margin-top: 27px;
   }
   .wrapper_usefull .container .wrapp_pagination button:first-child {

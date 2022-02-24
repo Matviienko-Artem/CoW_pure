@@ -3,9 +3,11 @@
 }
 
 .services-section .delimiter {
-  z-index: 0;
+  z-index: 1;
   height: 0px;
-  transform: translate(0, 300px);
+}
+.services-section .delimiter svg {
+  top: 100px;
 }
 
 .services-section .back-wrapper {

@@ -8,13 +8,14 @@ if (header) {
     let top = document.documentElement.getBoundingClientRect().y;
 
     if (lastScrollTop > -10) {
-      header.classList.remove("hide_up");
+      // header.classList.remove("hide_up");
       header.classList.remove("blackout");
     } else if (lastScrollTop < top) {
       header.classList.add("blackout");
-      header.classList.remove("hide_up");
+      // header.classList.remove("hide_up");
     } else if (lastScrollTop > top) {
-      header.classList.add("hide_up");
+      header.classList.add("blackout");
+      // header.classList.add("hide_up");
     }
 
     lastScrollTop = top;
@@ -61,6 +62,7 @@ if (servicesBtn) {
     e.preventDefault();
     menuNavBar.classList.add("slide-left");
     servicesSubMenu.classList.toggle("open");
+    header.classList.toggle("bg");
     if (servicesSubMenu.classList.contains("open")) {
       document.querySelector("html").style.overflow = "hidden";
     } else {

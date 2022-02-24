@@ -3,9 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-.detail-button span b {
-  font-size: 16px;
-}
+
 #header {
   position: fixed;
   z-index: 6;
@@ -36,6 +34,12 @@
 }
 #header.black.blackout {
   background-color: rgba(255, 255, 255, 0.3);
+}
+#header.bg {
+  background-color: #332e4c;
+}
+#header.black.bg {
+  background-color: rgba(255, 255, 255, 0.9);
 }
 
 #header.black {
@@ -196,7 +200,7 @@
   right: 10px;
 
   font-family: "Montserrat";
-  font-weight: 500;
+  font-weight: 400;
   font-size: 36px;
   line-height: 44px;
 }
@@ -567,10 +571,6 @@
   cursor: pointer;
 }
 
-#menu-navbar .menu-item.contacts_btns {
-  display: none;
-}
-
 @media (min-width: 1024px) {
   #menu-navbar > .menu-item:not(.currency):after {
     display: block;
@@ -654,6 +654,9 @@
     text-align: left;
     color: rgba(255, 255, 255, 0.5);
     transition: all 500ms ease;
+  }
+  #menu-navbar .menu-item.contacts_btns {
+    display: none;
   }
 
   #header.black #menu-navbar .sub-menu .menu-item {
