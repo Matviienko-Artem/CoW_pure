@@ -173,8 +173,8 @@ if (arrReadMoreContainers) {
     const content = item.children[0];
     const btnArrow = item.children[1].children[0];
     if (content && btnArrow) {
-      console.log(content);
-      console.log(btnArrow);
+      // console.log(content);
+      // console.log(btnArrow);
 
       item.addEventListener("click", () => SlideDown(content, btnArrow));
     }
@@ -212,16 +212,29 @@ if (readMoreBtn_singleTeacher) {
   );
 }
 
+const ourSchoolImage = document.querySelector(
+  ".our-school-section .our-school-image img"
+);
+
 if (btn_1) {
   openPlus(btn_1, acc_p_1);
+  btn_1.addEventListener("click", () => {
+    ourSchoolImage.attributes.src.value = "./images/our-school-image.jpg";
+  });
 }
 
 if (btn_2) {
   openPlus(btn_2, acc_p_2);
+  btn_2.addEventListener("click", () => {
+    ourSchoolImage.attributes.src.value = "./images/wrap3.png";
+  });
 }
 
 if (btn_3) {
   openPlus(btn_3, acc_p_3);
+  btn_3.addEventListener("click", () => {
+    ourSchoolImage.attributes.src.value = "./images/wrap2.png";
+  });
 }
 
 // изменение контента при выборе селекта в секции учителя
@@ -263,3 +276,8 @@ if (selectMilovidova) {
     });
   });
 }
+
+const videoWrap = document.querySelector(".video-container .video-wrap");
+videoWrap.addEventListener("click", (e) => {
+  e.target.style.display = "none";
+});

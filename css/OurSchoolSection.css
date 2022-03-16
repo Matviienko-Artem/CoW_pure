@@ -140,4 +140,8 @@
     font-size: 14px;
     line-height: 1.14;
   }
+
+  .our-school-section .our-school-image img {
+    min-width: 464px;
+  }
 }

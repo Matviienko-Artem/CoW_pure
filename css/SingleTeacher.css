@@ -126,11 +126,14 @@
   top: 0;
   width: 22px;
   height: 22px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
+  line-height: 1.2;
   font-weight: 600;
 
   border-radius: 50%;
@@ -151,6 +154,7 @@
   font-size: 14px;
   line-height: 16px;
   font-weight: 300;
+  letter-spacing: normal;
   text-transform: lowercase;
   border: 1px solid #d9d9d1;
   transition: opacity 500ms ease;

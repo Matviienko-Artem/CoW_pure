@@ -7,7 +7,7 @@ if (header) {
   window.addEventListener("scroll", function () {
     let top = document.documentElement.getBoundingClientRect().y;
 
-    if (lastScrollTop > -10) {
+    if (lastScrollTop > -50) {
       // header.classList.remove("hide_up");
       header.classList.remove("blackout");
     } else if (lastScrollTop < top) {

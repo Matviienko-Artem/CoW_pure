@@ -53,8 +53,17 @@
 .navigation_item::before {
   content: "";
   margin: 0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
   justify-content: center;
   width: 26px;
   height: 26px;
@@ -103,13 +112,12 @@
   font-weight: 300;
   text-transform: lowercase;
   cursor: pointer;
-  border-bottom: 1px solid #000;
 }
 .contact_details .client-list li:first-child {
   margin-right: 60px;
 }
 .contact_details .client-list li.active {
-  border-bottom: 3px solid#000;
+  border-bottom: 1px solid#000;
 }
 .contact_details form {
   padding-left: 70px;
@@ -142,6 +150,14 @@
   text-transform: uppercase;
   color: rgba(31, 31, 31, 1);
 }
+
+.contact_details form input:-webkit-autofill,
+.contact_details form input:-webkit-autofill:hover,
+.contact_details form input:-webkit-autofill:focus {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: rgba(31, 31, 31, 1);
+}
+
 .contact_details form select {
   color: rgba(31, 31, 31, 0.36);
 }
@@ -193,6 +209,7 @@
 }
 .contact_details form input[type="radio"] ~ label::before {
   position: absolute;
+  top: 0;
   left: -35px;
   content: "";
   width: 15px;
@@ -202,7 +219,7 @@
 }
 .contact_details form input[type="radio"]:checked ~ label::after {
   position: absolute;
-  top: 0;
+  top: 4px;
   left: -31px;
   content: "";
   width: 9px;
@@ -216,6 +233,7 @@
   min-height: 50px;
   width: 100%;
   margin-top: 30px;
+  justify-content: flex-end;
   background-color: #d9d9d1;
   outline: none;
   border: none;
@@ -381,6 +399,7 @@
   margin-top: 20px;
   font-size: 14px;
   font-weight: 400;
+  text-transform: initial;
 }
 .cart_page .total-list {
   padding-top: 20px;
@@ -585,15 +604,18 @@ button[form="cart_payment_details"] p {
   .contact_details {
     padding: 40px 12px 10px 12px;
   }
-  .contact_details .heading {
-    margin-bottom: 0;
-  }
+
   .contact_details .client-list li:first-child {
     margin-right: 0;
   }
   .contact_details .client-list li {
     width: 50%;
     text-align: center;
+    border-bottom: 1px solid#000;
+  }
+
+  .contact_details .client-list li.active {
+    border-bottom: 3px solid#000;
   }
   .contact_details form div {
     width: 100%;

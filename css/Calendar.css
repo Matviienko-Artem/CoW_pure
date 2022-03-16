@@ -184,7 +184,7 @@
 }
 
 .calendar_body .asside-container a {
-  /* padding-right: 30px; */
+  padding-right: 30px;
   justify-content: space-between;
   margin-top: 30px;
   position: relative;
@@ -195,9 +195,9 @@
   color: #332e4c;
 }
 
-.calendar_body .asside-container a span {
+.calendar_body .asside-container a svg {
   position: absolute;
-  top: 0;
+  top: 4px;
   right: 0;
 }
 
@@ -254,11 +254,6 @@
   list-style: none;
 }
 
-#calendar_page .detail-button rect,
-#calendar_page .detail-button path {
-  fill: #fff;
-}
-
 @media (min-width: 1024px) {
   #calendar_page {
     padding: 100px 40px 40px 40px;
@@ -296,5 +291,9 @@
   }
   .__select__title {
     font-size: 36px;
+  }
+  #calendar_page .detail-button rect,
+  #calendar_page .detail-button path {
+    fill: #fff;
   }
 }

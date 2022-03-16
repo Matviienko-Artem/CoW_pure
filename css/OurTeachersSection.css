@@ -55,6 +55,7 @@
 .our-teachers-section .teachers-themes .detail-button {
   margin-left: 65px;
   margin-bottom: 20px;
+  justify-content: flex-start;
 }
 .teachers-themes .about-teacher-heading {
   position: relative;

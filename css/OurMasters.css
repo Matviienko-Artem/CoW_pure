@@ -1,3 +1,6 @@
+.our-masters-section {
+  padding-top: 20px;
+}
 .our-masters-section .container_for_slider {
   text-align: center;
 }
@@ -86,7 +89,6 @@
 .our-masters-section .content-container .detail-button {
   color: #1f1f1f;
 }
-
 
 @media (max-width: 1024px) {
   .our-masters-section .content-container {

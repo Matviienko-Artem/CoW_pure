@@ -17,15 +17,15 @@ h2 {
   line-height: 1;
   text-align: center;
   text-transform: uppercase;
-  /* color: #1f1f1f; */
+  color: #1f1f1f;
 }
 p {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 16px;
+  line-height: 1.14;
+  letter-spacing: normal;
   text-transform: lowercase;
-  /* color: #000000; */
 }
 #catalog_page section.video-section {
   padding: 40px 12px 20px 12px;
@@ -36,27 +36,45 @@ p {
   margin: 15px 0;
 }
 
-#catalog_page .video-container .video {
-  min-height: 350px;
-  background-color: tomato;
+#catalog_page .video-container {
+  position: relative;
+  height: 350px;
+}
+
+#catalog_page .video-container .video-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(31, 31, 31, 0.5);
+  background-image: url("../images/video_play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px;
+  cursor: pointer;
 }
 #catalog_page section.catalog-container {
-  padding: 20px 0;
+  padding: 20px 10px;
   background-color: #fff;
 }
-section.catalog-container > h4 {
-  margin-top: 0;
-  color: #000;
+section.catalog-container .catalogSwiper {
+  height: 700px !important;
 }
-section.catalog-container .swiper-wrapper {
-  display: flex;
-  flex-wrap: wrap;
+section.catalog-container > h4 {
+  margin: 0 0 20px 0;
+  color: #000;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+section.catalog-container .catalogSwiper {
+  padding-bottom: 80px !important;
+  height: 100%;
+  width: 100%;
 }
 section.catalog-container .swiper-slide {
   width: calc(50% - 16px);
-  max-width: 255px;
-  margin: 8px;
-  position: relative;
+  height: calc((100% - 8px) / 2);
 }
 
 section.catalog-container .swiper-slide::before {
@@ -66,12 +84,13 @@ section.catalog-container .swiper-slide::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(51, 46, 76, 0.9);
+  background: rgba(51, 46, 76, 0.7);
 }
 .swiper-slide img {
   width: 100%;
   max-width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 section.catalog-container .swiper-slide .slide_head {
   position: absolute;
@@ -89,6 +108,29 @@ section.catalog-container .swiper-slide .slide_head {
 }
 section.catalog-container .swiper-slide .slide_head span {
   margin-left: 8px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+section.catalog-container .swiper-slide .slide_head:hover span,
+section.catalog-container .swiper-slide .slide_head:focus span {
+  color: #b8c3cb;
+}
+
+section.catalog-container .swiper-slide .slide_head svg circle {
+  transition: 0.3s;
+}
+section.catalog-container
+  .swiper-slide
+  .slide_head:hover
+  svg
+  circle:first-child,
+section.catalog-container
+  .swiper-slide
+  .slide_head:focus
+  svg
+  circle:first-child {
+  fill: #d9d9d1;
 }
 
 .swiper-slide .slide_info {
@@ -103,8 +145,17 @@ section.catalog-container .swiper-slide .slide_head span {
   color: #fff;
 }
 
+.swiper-slide .slide_info a span,
 .swiper-slide .slide_info a h4 {
-  margin: 0;
+  transition: 300ms;
+}
+.swiper-slide .slide_info a:hover span,
+.swiper-slide .slide_info a:hover h4 {
+  color: #b8c3cb;
+}
+
+.swiper-slide .slide_info a h4 {
+  margin: 10px 0 20px 0;
   font-family: "Cormorant", serif;
   font-weight: bold;
   font-size: 18px;
@@ -147,6 +198,7 @@ section.catalog-container .swiper-slide .slide_head span {
 }
 
 .swiper-slide button {
+  padding: 8px;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -156,11 +208,69 @@ section.catalog-container .swiper-slide .slide_head span {
   background: #ffffff;
   border: 1px solid #332e4c;
   transition: 0.3s;
-  width: 35px;
-  height: 35px;
+  width: 65px;
+  height: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.swiper-slide button:hover,
+.swiper-slide button:focus {
+  background-color: #d9d9d1;
+  border: 1px solid #332e4c;
+}
+
+#catalog_page .swiper-pagination {
+  bottom: 5px;
+}
+
+#catalog_page .catalogSwiper .swiper-button-next,
+#catalog_page .catalogSwiper .swiper-button-prev {
+  top: auto;
+  bottom: 0;
+
+  width: 55px;
+  height: 55px;
+  color: #332e4c;
+  background-color: #b8c3cb;
+  border-radius: 50%;
+  z-index: 11;
+}
+#catalog_page .catalogSwiper .swiper-button-next {
+  right: 25px;
+}
+#catalog_page .catalogSwiper .swiper-button-prev {
+  left: 25px;
+}
+#catalog_page .catalogSwiper .swiper-button-next .circle,
+#catalog_page .catalogSwiper .swiper-button-prev .circle {
+  width: 43px;
+  height: 43px;
+  border: 1px dashed #332e4c;
+  border-radius: 50%;
+}
+
+#catalog_page .catalogSwiper .swiper-button-next::after,
+#catalog_page .catalogSwiper .swiper-button-prev::after {
+  position: absolute;
+  font-size: 20px;
+}
+
+section.catalog-container .catalogSwiper .swiper-pagination-bullet {
+  display: inline;
+  background: none;
+  opacity: 1;
+  padding: 5px;
+  margin: 8px;
+  font-size: 12px;
+}
+
+section.catalog-container .catalogSwiper .swiper-pagination-bullet-active {
+  font-family: "Cormorant";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
 }
 
 section.catalog-container .swiper-slide .slide_head svg {
@@ -220,9 +330,32 @@ section.catalog-container .swiper-slide .slide_head svg {
 }
 
 @media (min-width: 1024px) {
+  section.catalog-container .catalogSwiper {
+    height: auto !important;
+  }
+  h2 {
+    font-size: 36px;
+  }
+  p {
+    font-size: 14px;
+  }
+  section.catalog-container > h4 {
+    margin: 0 0 20px 10px;
+    text-align: left;
+  }
+  .swiper-slide .slide_info a h4 {
+    margin: 10px 0;
+  }
+
+  #catalog_page .swiper-slide button {
+    padding: 4px;
+    width: 35px;
+    height: 35px;
+  }
+
   #catalog_page section.video-section {
     display: flex;
-    padding: 40px 0;
+    padding: 40px 0 0 0;
     background-image: linear-gradient(to bottom, #b8c3cb 50%, #fff 50%);
   }
   #catalog_page .text-conteiner {
@@ -232,13 +365,21 @@ section.catalog-container .swiper-slide .slide_head svg {
 
   #catalog_page .video-container {
     width: 50%;
-    padding: 0 40px;
-  }
-  #catalog_page .video-container .video {
     min-height: 500px;
+
+    margin: 0 40px;
   }
+
+  #catalog_page .video-container .video-wrap {
+    background-size: initial;
+  }
+
   #catalog_page section.catalog-container {
     padding: 0 40px 40px 40px;
+  }
+
+  section.catalog-container .swiper-slide {
+    max-width: 255px;
   }
 
   section.catalog-container .swiper-slide .slide_head svg {
