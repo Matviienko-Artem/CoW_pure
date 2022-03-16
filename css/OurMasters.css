@@ -1,6 +1,9 @@
 .our-masters-section {
   padding-top: 20px;
 }
+#about_school_page .our-masters-section {
+  padding-top: 0;
+}
 .our-masters-section .container_for_slider {
   text-align: center;
 }

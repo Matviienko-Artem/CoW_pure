@@ -186,3 +186,27 @@ document.addEventListener("click", (e) => {
     currencyModalPopup.classList.remove("open");
   }
 });
+
+// показ линии только когда она находится в видимой части старницы
+const arrDelimiters = document.querySelectorAll(".delimiter");
+
+function isVisible(elem) {
+  let coords = elem.getBoundingClientRect();
+  let windowHeight = document.documentElement.clientHeight;
+
+  let topVisible = coords.top > 0 && coords.top < windowHeight;
+  let bottomVisible = coords.bottom < windowHeight && coords.bottom > 0;
+
+  return topVisible || bottomVisible;
+}
+
+function showVisible() {
+  for (let delimiter of arrDelimiters) {
+    if (isVisible(delimiter)) {
+      delimiter.querySelector("svg").style.display = "block";
+    }
+  }
+}
+
+window.addEventListener("scroll", showVisible);
+showVisible();

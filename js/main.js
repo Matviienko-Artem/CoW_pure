@@ -278,6 +278,8 @@ if (selectMilovidova) {
 }
 
 const videoWrap = document.querySelector(".video-container .video-wrap");
-videoWrap.addEventListener("click", (e) => {
-  e.target.style.display = "none";
-});
+if (videoWrap) {
+  videoWrap.addEventListener("click", (e) => {
+    e.target.style.display = "none";
+  });
+}
