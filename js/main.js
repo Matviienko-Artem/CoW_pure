@@ -80,7 +80,7 @@ const cartClientDetailsFormInputs = document.querySelectorAll(
 );
 
 const arrCartClientDetailsFormInputs = Array.from(cartClientDetailsFormInputs);
-const popupFormInputs = document.querySelectorAll(".popup input[type='text']");
+const popupFormInputs = document.querySelectorAll(".popup input");
 const arrPopupFormInputsFormInputs = Array.from(popupFormInputs);
 const writeUsFormInputs = document.querySelectorAll(".write-us-section input");
 const arrWriteUsFormInputsFormInputs = Array.from(writeUsFormInputs);
@@ -173,9 +173,6 @@ if (arrReadMoreContainers) {
     const content = item.children[0];
     const btnArrow = item.children[1].children[0];
     if (content && btnArrow) {
-      // console.log(content);
-      // console.log(btnArrow);
-
       item.addEventListener("click", () => SlideDown(content, btnArrow));
     }
   });

@@ -69,12 +69,13 @@
   height: 26px;
   border: 1px solid #1f1f1f;
   border-radius: 50%;
-  font-size: 22px;
+  font-size: 18px;
 }
 .navigation_item.active::before {
   content: "\25C6";
 }
 .flex-box {
+  min-height: calc(100vh - 213px - 252px);
   display: flex;
   justify-content: center;
 }
@@ -262,7 +263,7 @@
 
 .cart_page .cart_container .cart-heading {
   min-height: 55px;
-  padding: 0 20px;
+  /* padding: 0 20px; */
   display: flex;
   align-items: center;
   justify-content: space-between;

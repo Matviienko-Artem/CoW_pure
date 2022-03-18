@@ -49,10 +49,10 @@
             <div class="delimiter">
               <svg preserveAspectRatio="none" width="1440" height="951" viewBox="0 0 1440 951" fill="none"
                 xmlns="http://www.w3.org/2000/svg" class="lineSVG">
-                <path opacity="0.54"
+                <path opacity="0.14"
                   d="M1444.41 172.5C1443.79 363.197 1044.06 725.744 750.235 553.003C300.376 288.525 -110.333 252.537 -462.086 652.727"
                   stroke="#B8C3CB" stroke-width="1"></path>
-                <path opacity="0.54"
+                <path opacity="0.14"
                   d="M1444.41 172.5C1443.79 363.197 1044.06 725.744 750.235 553.003C300.376 288.525 -110.333 252.537 -462.086 652.727"
                   stroke="#ffffff" stroke-width="1"></path>
               </svg>
@@ -128,7 +128,7 @@
         </ul>
       </li>
       <li id="menu-item-613" class="menu-item ">
-        <a href="#">
+        <a href="./calendar.html">
           расписание
         </a>
       </li>
@@ -142,7 +142,7 @@
           контакты
         </a>
       </li>
-      <li id="menu-item-613" class="menu-item  currency">
+      <li id="toggle_currency_btn" class="menu-item  currency">
         <a href="#">
           грн
         </a>
@@ -173,7 +173,7 @@
               stroke="white" stroke-width="1" />
           </svg>
         </a>
-        <a href="" class="icon icon-person">
+        <a href="" id="toggle_personal_btn" class="icon icon-person">
           <svg width="17" height="19" viewBox="0 0 13 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M0.263424 14.842C0.385146 14.9084 3.28179 16.4682 6.5 16.4682C9.98659 16.4682 12.635 14.9032 12.746 14.8366C12.7854 14.813 12.8179 14.7796 12.8405 14.7397C12.8631 14.6998 12.875 14.6547 12.875 14.6088C12.875 12.4641 12.2173 10.5016 11.0232 9.08242C10.1879 8.08965 9.13981 7.41297 7.98385 7.10145C8.69146 6.76471 9.26348 6.1973 9.60594 5.49244C9.9484 4.78758 10.0409 3.9872 9.86832 3.22279C9.69571 2.45839 9.26822 1.77543 8.65611 1.28613C8.04399 0.796823 7.28365 0.530273 6.5 0.530273C5.71635 0.530273 4.95601 0.796823 4.34389 1.28613C3.73178 1.77543 3.30429 2.45839 3.13168 3.22279C2.95907 3.9872 3.0516 4.78758 3.39406 5.49244C3.73652 6.1973 4.30854 6.76471 5.01615 7.10145C3.86019 7.41297 2.8121 8.08975 1.97677 9.08242C0.782654 10.5016 0.125 12.4641 0.125 14.6088C0.125 14.6565 0.137855 14.7034 0.162213 14.7444C0.186571 14.7854 0.221533 14.8191 0.263424 14.842ZM3.57812 3.98381C3.57812 3.40592 3.74949 2.84101 4.07055 2.36051C4.39161 1.88001 4.84794 1.5055 5.38185 1.28435C5.91575 1.0632 6.50324 1.00534 7.07003 1.11808C7.63682 1.23082 8.15745 1.5091 8.56608 1.91774C8.97471 2.32637 9.25299 2.847 9.36573 3.41378C9.47847 3.98057 9.42061 4.56806 9.19946 5.10197C8.97831 5.63587 8.60381 6.0922 8.12331 6.41326C7.64281 6.73432 7.07789 6.90569 6.5 6.90569C5.72534 6.90481 4.98266 6.59669 4.43489 6.04892C3.88713 5.50115 3.579 4.75847 3.57812 3.98381ZM2.38324 9.42444C3.46191 8.14277 4.92378 7.43694 6.5 7.43694C8.07622 7.43694 9.53809 8.14277 10.6168 9.42444C11.7019 10.714 12.312 12.4951 12.3426 14.4539C11.7741 14.7615 9.41218 15.9369 6.5 15.9369C3.80689 15.9369 1.27051 14.7546 0.657578 14.4476C0.689453 12.4912 1.29929 10.7126 2.38324 9.42444Z"
@@ -266,8 +266,8 @@
     </div>
   
     <div class="modal-wrapper">
-      <div id="cart_popup">
-        <div class="cart-heading">
+      <div id="cart_popup" class="popup">
+        <div class="popup-heading">
           <p>Корзина</p>
           <div class="close-btn">
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -277,7 +277,7 @@
             </svg>
           </div>
         </div>
-        <div class="cart-list">
+        <div class="popup-body">
           <ul>
             <li class="cart-item">
               <img src="./images/order/book.jpg" alt="книга">
@@ -321,7 +321,7 @@
             <span class="total-currency">грн</span>
           </div>
         </div>
-        <div class="cart-footing">
+        <div class="popup-footing">
           <a href="#" class="detail-button">
             продолжить покупки
             <svg width="35" height="4" viewBox="0 0 35 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -333,7 +333,7 @@
             </svg>
           </a>
   
-          <a href="#" class="purchase-button">
+          <a href="cart_information.html" class="purchase-button">
             <p>оформить покупку</p>
             <div class="purchase-icon">
               <svg width="100%" height="100%" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -343,6 +343,146 @@
               </svg>
             </div>
           </a>
+        </div>
+      </div>
+      <div id="personal_popup" class="popup">
+        <div class="popup-heading">
+          <p>ВХОД В ЛИЧНЫЙ КАБИНЕТ</p>
+          <div class="close-btn">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+                fill="#332E4C" />
+            </svg>
+          </div>
+        </div>
+        <div class="popup-body">
+          <form action="" id="customer_login">
+            <div>
+              <input type="text" name="mail" id="client_email">
+              <label for="client_email">ваш e-mail</label>
+            </div>
+            <div>
+              <input type="password" name="password" id="client_password">
+              <label for="client_password">ваш пароль</label>
+              <button type="button" class="registration__show"></button>
+            </div>
+          </form>
+        </div>
+        <div class="popup-footing">
+          <a id="toggle_forgot_btn" href="#" class="detail-button">
+            Напомнить пароль
+            <svg width="35" height="4" viewBox="0 0 35 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="2.41406" width="2" height="2" transform="rotate(-45 0 2.41406)" fill="#332E4C" />
+              <rect x="5" y="2.41406" width="2" height="2" transform="rotate(-45 5 2.41406)" fill="#332E4C" />
+              <path
+                d="M34.1768 2.17678C34.2744 2.07915 34.2744 1.92085 34.1768 1.82322L32.5858 0.232233C32.4882 0.134602 32.3299 0.134602 32.2322 0.232233C32.1346 0.329864 32.1346 0.488155 32.2322 0.585786L33.6464 2L32.2322 3.41421C32.1346 3.51184 32.1346 3.67014 32.2322 3.76777C32.3299 3.8654 32.4882 3.8654 32.5858 3.76777L34.1768 2.17678ZM13 2.25H34V1.75H13V2.25Z"
+                fill="#332E4C" />
+            </svg>
+          </a>
+  
+          <a href="#" class="purchase-button">
+            <p>ввойти</p>
+            <div class="purchase-icon">
+              ⟶
+            </div>
+          </a>
+        </div>
+        <div class="popup-btns">
+          <div class="register-btn">
+            <a href="registration.html" class="detail-button">
+              Зарегистрироваться
+              <svg width="35" height="4" viewBox="0 0 35 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="2.41406" width="2" height="2" transform="rotate(-45 0 2.41406)" fill="#332E4C" />
+                <rect x="5" y="2.41406" width="2" height="2" transform="rotate(-45 5 2.41406)" fill="#332E4C" />
+                <path
+                  d="M34.1768 2.17678C34.2744 2.07915 34.2744 1.92085 34.1768 1.82322L32.5858 0.232233C32.4882 0.134602 32.3299 0.134602 32.2322 0.232233C32.1346 0.329864 32.1346 0.488155 32.2322 0.585786L33.6464 2L32.2322 3.41421C32.1346 3.51184 32.1346 3.67014 32.2322 3.76777C32.3299 3.8654 32.4882 3.8654 32.5858 3.76777L34.1768 2.17678ZM13 2.25H34V1.75H13V2.25Z"
+                  fill="#332E4C" />
+              </svg>
+            </a>
+          </div>
+          <div class="login-as">
+            <p>Войти как пользователь</p>
+            <div class="social-icons">
+              <a href="#" class="item" target="_blank" rel="noreferrer noopener">
+                <div class="circle">
+                  <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.0104 11.2501L10.5656 7.63008H7.09252V5.28137C7.09252 4.29101 7.5775 3.32608 9.13314 3.32608H10.712V0.244202C10.712 0.244202 9.27955 0 7.90933 0C5.04847 0 3.17967 1.73314 3.17967 4.87155V7.63008H0V11.2501H3.17967V20H7.09252V11.2501H10.0104Z"
+                      fill="white" />
+                  </svg>
+                </div>
+              </a>
+              <a href="#" class="item" target="_blank" rel="noreferrer noopener">
+                <div class="circle">
+                  <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M11.5037 0.700195C5.53761 0.700195 0.700195 5.53589 0.700195 11.5002C0.700195 17.4645 5.53761 22.3002 11.5037 22.3002C20.5127 22.3002 22.5424 13.9365 21.6973 9.70019H20.5002H18.4594H11.5002V13.3002H18.4646C17.664 16.4036 14.8536 18.7002 11.5002 18.7002C7.52399 18.7002 4.30019 15.4764 4.30019 11.5002C4.30019 7.52399 7.52399 4.30019 11.5002 4.30019C13.3083 4.30019 14.9554 4.97137 16.2199 6.07207L18.7775 3.51621C16.8569 1.76661 14.3054 0.700195 11.5037 0.700195Z"
+                      fill="white" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="forgot_popup" class="popup">
+        <div class="popup-heading">
+          <p>Забыл свой пароль?</p>
+          <div class="close-btn">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+                fill="#332E4C" />
+            </svg>
+          </div>
+        </div>
+        <div class="popup-body">
+          <form action="" id="forgot_password">
+            <div>
+              <input type="text" name="mail" id="client_email">
+              <label for="client_email">ваш e-mail</label>
+            </div>
+          </form>
+        </div>
+        <div class="popup-footing">
+          <a href="#" class="purchase-button">
+            <p>напомнить пароль</p>
+            <div class="purchase-icon">
+              ⟶
+            </div>
+          </a>
+        </div>
+        <div class="popup-btns">
+          <div class="register-btn">
+            <a href="#" class="detail-button come-back-btn">
+              назад
+              <svg width="35" height="4" viewBox="0 0 35 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="2.41406" width="2" height="2" transform="rotate(-45 0 2.41406)" fill="#332E4C" />
+                <rect x="5" y="2.41406" width="2" height="2" transform="rotate(-45 5 2.41406)" fill="#332E4C" />
+                <path
+                  d="M34.1768 2.17678C34.2744 2.07915 34.2744 1.92085 34.1768 1.82322L32.5858 0.232233C32.4882 0.134602 32.3299 0.134602 32.2322 0.232233C32.1346 0.329864 32.1346 0.488155 32.2322 0.585786L33.6464 2L32.2322 3.41421C32.1346 3.51184 32.1346 3.67014 32.2322 3.76777C32.3299 3.8654 32.4882 3.8654 32.5858 3.76777L34.1768 2.17678ZM13 2.25H34V1.75H13V2.25Z"
+                  fill="#332E4C" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="currency_popup" class="popup">
+        <div class="popup-heading">
+          <p>выберите валюту</p>
+          <div class="close-btn">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z"
+                fill="#332E4C" />
+            </svg>
+          </div>
+        </div>
+        <div class="popup-body">
+          <button class="currency-btn" type="button">грн</button>
+          <button class="currency-btn" type="button">USD</button>
+  
         </div>
       </div>
     </div>
