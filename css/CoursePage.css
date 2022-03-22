@@ -7,7 +7,7 @@
 }
 
 #course_page h2 {
-  margin-top: 0;
+  margin-bottom: 35px;
   font-family: "Cormorant", serif;
   font-weight: bold;
   font-size: 36px;
@@ -17,7 +17,7 @@
 }
 
 .course-section {
-  padding-top: 100px;
+  padding-top: 140px;
   background-color: #fff;
   background-image: linear-gradient(to bottom, #332e4c 95%, #fff 5%);
   display: flex;
@@ -31,11 +31,23 @@
 }
 
 .course-themes h5 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
   font-size: 12px;
   line-height: 14px;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+.course-themes h5::before {
+  content: "";
+  width: 55px;
+  height: 55px;
+  margin-right: 10px;
+  background-image: url("/images/graduation_hat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .markers {
   display: flex;
@@ -75,17 +87,17 @@
   background-repeat: no-repeat;
 }
 .marker-item.level .marker-logo {
-  background-image: url("./assets/level.svg");
+  background-image: url("/images/level.svg");
 }
 
 .marker-item.direction .marker-logo {
-  background-image: url("./assets/vector.svg");
+  background-image: url("/images/flow.svg");
 }
 .marker-item.start .marker-logo {
-  background-image: url("./assets/start.svg");
+  background-image: url("/images/start.svg");
 }
 .marker-item.duration .marker-logo {
-  background-image: url("./assets/calendar.svg");
+  background-image: url("/images/calendar.svg");
 }
 
 .about-course-menu .about-course-heading {
@@ -119,20 +131,23 @@
 }
 
 .about-course-content p {
+  margin: 20px 0;
   text-transform: lowercase;
   font-weight: 300;
 }
 .about-course-content .detail-button {
   color: #fff;
+  justify-content: flex-start;
 }
 
 .course-img {
   width: 33%;
   min-height: 720px;
-  background-image: url("./assets/course-img.jpg");
+  background-image: url("/images/course-img.jpg");
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .course-option {
   width: 33%;
   padding: 0 30px;
@@ -151,6 +166,7 @@
   text-transform: uppercase;
 }
 .course-option .select-container h5 {
+  margin: 25px 0;
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;
@@ -183,10 +199,12 @@
   text-transform: lowercase;
 }
 .course-option .select-container ul.filling li {
+  margin: 15px 0;
   position: relative;
 }
 .course-option .select-container ul.filling li::before {
   content: "\25C6";
+  font-size: 18px;
   position: absolute;
   left: -20px;
 }
@@ -210,17 +228,17 @@
 #course_page .price-container .price-icons {
   display: flex;
 }
-.cart-icon.heart {
+#course_page .cart-icon.heart {
   background-color: #332e4c;
 }
-.cart-icon.heart:hover {
+#course_page .cart-icon.heart:hover {
   background-color: #fff;
 }
-.cart-icon.heart:hover path {
+#course_page .cart-icon.heart:hover path {
   stroke: #332e4c;
 }
 
-.cart-icon.heart:hover path {
+#course_page .cart-icon.heart:hover path {
   fill: none !important;
 }
 #course_page .attention {
@@ -250,6 +268,9 @@
   position: absolute;
   left: 0;
 }
+#course_page .free-lesson-container .attention::before {
+  border: 1px solid #1f1f1f;
+}
 /* .course-option .about-course-menu .about-course-heading ul {
   justify-content: left;
 }
@@ -258,7 +279,7 @@
 } */
 
 section.about-course-section {
-  padding: 50px 40px;
+  padding: 90px 40px 60px 40px;
   background-color: #fff;
   color: #000;
 }
@@ -277,14 +298,15 @@ section.about-course-section {
   margin-top: 0;
 }
 .about-course-section p {
+  margin: 20px 0;
   font-size: 12px;
   line-height: 14px;
   font-weight: 300;
-  letter-spacing: 0.1em;
 }
 .about-course-section b {
   text-transform: uppercase;
   font-weight: 500;
+  letter-spacing: 0.1em;
 }
 
 section.format-course {
@@ -292,7 +314,9 @@ section.format-course {
   background-color: #332e4c;
   color: #fff;
 }
-
+#course_page section.format-course h2 {
+  margin-bottom: 50px;
+}
 section.format-course p {
   text-transform: lowercase;
   font-weight: 300;
@@ -306,13 +330,14 @@ section.format-course ul.main {
 
 section.format-course ul.main li {
   width: 25%;
-  padding: 0 35px;
+  padding: 0 35px 35px 35px;
 }
 section.format-course ul.main li:not(:last-child) {
   border-right: 1px solid #fff;
 }
 
 section.format-course ul.main .item-icon {
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -330,12 +355,23 @@ section.free-lesson .video-container {
   width: 45%;
 }
 
-section.free-lesson .video-container .video {
-  width: 100%;
-  height: 100%;
-  min-height: 350px;
+section.free-lesson .video-container .video-wrap {
+  width: calc(100% - 40px);
+  height: calc(100% - 40px);
+  max-height: 460px;
+  position: absolute;
+  background-color: rgba(31, 31, 31, 0.5);
+  background-image: url("/images/video_play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  z-index: 10;
   transform: translate(0, -60px);
-  background-color: tomato;
+}
+
+section.free-lesson .video-container .video {
+  max-height: 460px;
+  transform: translate(0, -60px);
 }
 
 section.free-lesson .free-lesson-container {
@@ -355,6 +391,9 @@ section.free-lesson .free-lesson-container ul.free-lesson-list > li {
   max-height: 100px;
 
   transition: max-height 500ms ease;
+}
+section.free-lesson .free-lesson-container ul.free-lesson-list > li p {
+  margin-bottom: 30px;
 }
 
 section.free-lesson .free-lesson-container ul.free-lesson-list > li.open {
@@ -425,6 +464,7 @@ section.free-lesson .free-lesson-container ul.free-lesson-list > li.open {
   margin-bottom: 20px;
 }
 .free-lesson-container .content .list li {
+  margin: 10px 0;
   position: relative;
 }
 .free-lesson-container .content .list li::before {
@@ -555,7 +595,7 @@ section.free-lesson .free-lesson-container ul.free-lesson-list > li.open {
   width: 13px;
   height: 7px;
 
-  background-image: url("./assets/arrow.svg");
+  background-image: url("/images/arrow_down.svg");
   background-repeat: no-repeat;
   background-position: center;
   position: absolute;
@@ -597,13 +637,13 @@ section.free-lesson .free-lesson-container ul.free-lesson-list > li.open {
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 300;
-  line-height: 16px;
+  line-height: 1.14;
   text-transform: lowercase;
 }
 .select-list-item .selected-item .image {
   width: 40%;
   min-height: 589px;
-  background-image: url("./assets/image_84.jpg");
+  background-image: url("/images/image_84.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -612,6 +652,9 @@ section.free-lesson .free-lesson-container ul.free-lesson-list > li.open {
   padding: 0;
   list-style: none;
 }
+.select-list-item .selected-item .content ul li > p {
+  margin: 25px 0;
+}
 .select-list-item .selected-item .content .heading {
   padding: 20px 0;
   display: flex;
@@ -619,11 +662,12 @@ section.free-lesson .free-lesson-container ul.free-lesson-list > li.open {
   border-bottom: 1px solid #000;
 
   font-size: 12px;
-  line-height: 14px;
+  line-height: 1.17;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+
 #course_page .our-teachers-section h2 {
   text-align: left;
 }
@@ -636,9 +680,15 @@ section.payment {
   text-align: center;
   color: #1f1f1f;
 }
+#course_page section.payment h5 {
+  margin-bottom: 10px;
+}
+#course_page section.payment h2 {
+  margin: 0;
+}
 
 section.payment .section-heading {
-  padding: 10px 0;
+  padding: 15px 0;
   margin-bottom: 10px;
 }
 
@@ -646,27 +696,38 @@ section.payment .month-course,
 section.payment .block-course,
 section.payment .full-course {
   order: 2;
-  padding: 30px;
-  width: calc(50% - 20px);
-  margin: 10px;
+  padding: 30px 20px;
+  margin: 20px 10px;
   background-color: #b8c3cb;
 }
 section.payment .blocks {
   display: flex;
-  flex-wrap: wrap;
+}
+section.payment .blocks .first-column,
+section.payment .blocks .second-column {
+  width: 100%;
 }
 
 section.payment .full-course {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   order: 1;
+  height: calc(100% - 30px);
 }
-
+section.payment .full-course h4 {
+  margin-bottom: 15px;
+}
+section.payment .full-course-list h4 {
+  margin-bottom: 40px;
+}
 section.payment .attention-container {
   order: 2;
-  width: calc(50% - 20px);
   margin: 10px;
 }
 
-h3 {
+section.payment h3 {
+  margin: 15px 0;
   font-family: "Cormorant", serif;
   font-style: normal;
   font-weight: 700;
@@ -675,7 +736,7 @@ h3 {
   text-transform: uppercase;
   text-align: left;
 }
-h4 {
+section.payment h4 {
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   font-weight: 500;
@@ -697,9 +758,10 @@ h4 {
   margin-bottom: 0;
   margin-left: 20px;
 }
-#course_page .attention::before {
-  border: 1px solid #332e4c;
+#course_page section.payment .attention::before {
+  border: 1px solid #1f1f1f;
 }
+
 #course_page section.payment .price-container .cart-icon {
   background-color: #1f1f1f;
   border: 1px solid #1f1f1f;
@@ -727,25 +789,28 @@ section.payment .full-course-list p {
   text-align: left;
 }
 section.payment .full-course-list ul {
+  margin-bottom: 40px;
   padding-left: 15px;
 }
 section.payment .full-course-list ul li {
   margin-bottom: 10px;
 }
 section.payment .full-course-list p {
+  margin-bottom: auto;
   font-size: 16px;
   font-weight: 500;
   text-transform: lowercase;
 }
 
 section.payment .attention-container {
-  padding: 30px;
+  display: flex;
+  padding: 20px;
   background-color: #d9d9d1;
 
   text-align: left;
 }
 section.payment .attention-container img {
-  margin-right: 5px;
+  margin-right: 15px;
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -761,9 +826,15 @@ section.payment .attention-container img {
   .course-section {
     flex-direction: column;
   }
+  #course_page .attention {
+    font-size: 16px;
+  }
+  #course_page .attention::before {
+    border: 1px solid #332e4c;
+  }
   .course-img {
     order: 1;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     min-height: 300px;
     background-color: #332e4c;
   }
@@ -771,6 +842,15 @@ section.payment .attention-container img {
     padding: 0 10px 30px 10px;
     order: 2;
     background-color: #332e4c;
+  }
+
+  .marker-item .marker-heading {
+    font-size: 10px;
+    font-weight: 400;
+  }
+
+  .about-course-content p {
+    font-size: 16px;
   }
 
   .course-option {
@@ -784,10 +864,17 @@ section.payment .attention-container img {
   .course-option {
     width: 100%;
   }
+  .course-option .select-container h5 {
+    font-size: 18px;
+  }
+  .course-option .select-container ul.filling {
+    font-size: 16px;
+  }
   .course-option select {
     border: 1px solid #332e4c;
     background-color: #fff;
     color: #332e4c;
+    font-size: 14px;
   }
   .select-container .number-of-classes .board-icon svg {
     width: 30px;
@@ -799,6 +886,7 @@ section.payment .attention-container img {
   section.about-course-section {
     padding: 20px 12px;
   }
+
   section.format-course {
     padding: 50px 15px;
   }
@@ -813,9 +901,17 @@ section.payment .attention-container img {
   section.format-course ul.main li:not(:last-child) {
     border: 0;
   }
+  section.format-course ul.main .item-icon {
+    align-items: flex-start;
+  }
   section.format-course ul.main li .item-content {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     margin-left: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  section.format-course ul.main li:last-child .item-content {
+    border: 0;
   }
   section.format-course ul.main .item-icon svg {
     height: 30px;
@@ -843,6 +939,9 @@ section.payment .attention-container img {
   .cart-icon.heart path {
     stroke: #332e4c;
   }
+  .about-course-menu .about-course-heading {
+    border-bottom: 1px solid #332e4c;
+  }
 
   section.free-lesson {
     padding-top: 50px;
@@ -853,6 +952,12 @@ section.payment .attention-container img {
   section.free-lesson .video-container {
     padding: 0 10px;
     width: 100%;
+    height: 352px;
+  }
+  section.free-lesson .video-container .video-wrap {
+    width: calc(100% - 20px);
+    height: 100%;
+    transform: translate(0, 0);
   }
   section.free-lesson .video-container .video {
     transform: translate(0, 0);
@@ -860,6 +965,9 @@ section.payment .attention-container img {
   section.free-lesson .free-lesson-container {
     padding: 10px;
     width: 100%;
+  }
+  section.free-lesson .free-lesson-container .content {
+    font-size: 16px;
   }
   .free-lesson-container .heading ul {
     flex-wrap: wrap;
@@ -892,6 +1000,16 @@ section.payment .attention-container img {
     width: 100%;
   }
 
+  .select-list-item .selected-item .content .heading {
+    padding: 10px 0;
+    font-size: 10px;
+    border-top: 1px solid #000;
+  }
+
+  .select-list-item .selected-item .content ul li > p {
+    font-size: 16px;
+  }
+
   .select-list-item .selected-item .image {
     min-height: 336px;
   }
@@ -903,11 +1021,16 @@ section.payment .attention-container img {
     width: 100%;
   }
 
+  section.payment .blocks {
+    flex-wrap: wrap;
+  }
+
   #course_page section.payment .price {
     display: block;
   }
   #course_page section.payment .price-container,
   #course_page section.payment .attention {
+    margin: 20px 0;
     width: 100%;
   }
 

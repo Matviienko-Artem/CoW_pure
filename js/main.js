@@ -280,3 +280,100 @@ if (videoWrap) {
     e.target.style.display = "none";
   });
 }
+
+// страница Курса, открытие и закрытие бесплатных занятий
+const freeLessonsList_1 = document.querySelector(
+  "ul.free-lesson-list li.first"
+);
+const btnFree_1 = document.querySelector(
+  "ul.free-lesson-list li.first .btn .border"
+);
+if (btnFree_1) {
+  btnFree_1.addEventListener("click", () => {
+    freeLessonsList_1.classList.toggle("open");
+    if (btnFree_1.innerText === "+") {
+      btnFree_1.innerText = "-";
+    } else {
+      btnFree_1.innerText = "+";
+    }
+  });
+}
+
+const freeLessonsList_2 = document.querySelector(
+  "ul.free-lesson-list li.second"
+);
+const btnFree_2 = document.querySelector(
+  "ul.free-lesson-list li.second .btn .border"
+);
+
+if (btnFree_2) {
+  btnFree_2.addEventListener("click", () => {
+    freeLessonsList_2.classList.toggle("open");
+    if (btnFree_2.innerText === "+") {
+      btnFree_2.innerText = "-";
+    } else {
+      btnFree_2.innerText = "+";
+    }
+  });
+}
+
+const freeLessonsList_3 = document.querySelector(
+  "ul.free-lesson-list li.third"
+);
+const btnFree_3 = document.querySelector(
+  "ul.free-lesson-list li.third .btn .border"
+);
+
+if (btnFree_3) {
+  btnFree_3.addEventListener("click", () => {
+    freeLessonsList_3.classList.toggle("open");
+    if (btnFree_3.innerText === "+") {
+      btnFree_3.innerText = "-";
+    } else {
+      btnFree_3.innerText = "+";
+    }
+  });
+}
+
+// страница Курса расписние Программы курса
+
+let selectedFlow = "5";
+
+const flow_5 = document.getElementById("5_flow");
+const flow_4 = document.getElementById("4_flow");
+const flow_3 = document.getElementById("3_flow");
+const flow_select = document.getElementById("flow_select");
+
+const removeAllList = () => {
+  const arr = Array.from(document.querySelectorAll("ul.selected-content-list"));
+  arr.map((i) => i.classList.remove("selected"));
+};
+
+const handleChange = (e) => {
+  selectedFlow = e.target.value;
+
+  if (selectedFlow === "5") {
+    removeAllList();
+
+    document
+      .querySelector("ul.selected-content-list.selected_5")
+      .classList.add("selected");
+  } else if (selectedFlow === "4") {
+    removeAllList();
+
+    document
+      .querySelector("ul.selected-content-list.selected_4")
+      .classList.add("selected");
+  } else if (selectedFlow === "3") {
+    removeAllList();
+
+    document
+      .querySelector("ul.selected-content-list.selected_3")
+      .classList.add("selected");
+  }
+};
+
+flow_5.addEventListener("click", (e) => handleChange(e));
+flow_4.addEventListener("click", (e) => handleChange(e));
+flow_3.addEventListener("click", (e) => handleChange(e));
+flow_select.addEventListener("click", (e) => handleChange(e));

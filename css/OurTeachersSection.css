@@ -199,6 +199,7 @@
 }
 .our-teachers-section .teachers-photo img {
   display: block;
+  margin: 0 auto;
 }
 
 .our-teachers-section .teachers-photo.lubanova {

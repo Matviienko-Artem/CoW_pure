@@ -1,10 +1,11 @@
 // выделение в хедере линией текущую страницу
 
 const currentPagePath = window.location.pathname;
+const fileName = currentPagePath.substring(currentPagePath.lastIndexOf("/"));
 const currentPageLink = document.querySelector(
-  `#header a[href=".${currentPagePath}"]`
+  `#header a[href=".${fileName}"]`
 );
-if (currentPageLink.parentElement) {
+if (currentPageLink) {
   currentPageLink.parentElement.classList.add("active_page");
 }
 
