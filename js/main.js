@@ -274,11 +274,16 @@ if (selectMilovidova) {
   });
 }
 
-const videoWrap = document.querySelector(".video-container .video-wrap");
-if (videoWrap) {
-  videoWrap.addEventListener("click", (e) => {
-    e.target.style.display = "none";
-  });
+const videoWrap = document.querySelectorAll(".video-container .video-wrap");
+
+for (let index = 0; index < videoWrap.length; index++) {
+  const element = videoWrap[index];
+
+  if (element) {
+    element.addEventListener("click", (e) => {
+      e.target.style.display = "none";
+    });
+  }
 }
 
 // страница Курса, открытие и закрытие бесплатных занятий

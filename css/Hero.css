@@ -273,8 +273,8 @@
   .hero_cart_container .cart-icon svg {
     width: 31px;
   }
-  .swiper .swiper-button-next,
-  .swiper .swiper-button-prev {
+  .swiper.heroSwiper .swiper-button-next,
+  .swiper.heroSwiper .swiper-button-prev {
     padding: 5px;
     width: 18px;
     height: 30px;

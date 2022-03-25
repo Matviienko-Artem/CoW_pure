@@ -1181,6 +1181,7 @@ button:focus {
   line-height: 14px;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
 }
 .detail-button svg {
   transition: transform 500ms ease;
