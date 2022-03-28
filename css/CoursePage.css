@@ -339,6 +339,13 @@
   justify-content: space-between;
   border-bottom: 1px solid #fff;
 }
+#course_page .price-container p {
+  font-family: "Cormorant", serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.5;
+}
 
 #course_page .price-container .number {
   display: flex;

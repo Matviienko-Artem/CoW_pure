@@ -104,6 +104,10 @@
   color: inherit;
 }
 
+#header a.detail-button {
+  display: flex;
+}
+
 #header .icons-group .icon.desctop-hidden {
   display: none;
 }

@@ -1174,7 +1174,7 @@ button:focus {
 .detail-button {
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-size: 12px;
