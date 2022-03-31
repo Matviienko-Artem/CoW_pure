@@ -71,6 +71,10 @@
   cursor: pointer;
 }
 
+.read_more_btn {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .video-section {
     padding: 50px 11px;
