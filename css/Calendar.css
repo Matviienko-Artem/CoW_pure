@@ -224,9 +224,9 @@
   padding: 5px 0 20px 0;
 }
 .calendar_body .calendar-container table tbody td {
-  padding: 10px;
+  padding: 5px;
   vertical-align: top;
-  font-size: 14px;
+  font-size: 10px;
   font-weight: 300;
   line-height: 1.17;
   border: 1px solid #000;
@@ -295,5 +295,11 @@
   #calendar_page .detail-button rect,
   #calendar_page .detail-button path {
     fill: #fff;
+  }
+
+  .calendar_body .calendar-container table tbody td {
+    padding: 10px;
+    font-size: 14px;
+
   }
 }
