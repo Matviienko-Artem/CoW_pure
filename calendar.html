@@ -586,36 +586,55 @@
     <div id="calendar_page">
         <div class="calendar_heading">
             <form>
-                <div class="__select" data-state="">
-                    <div class="__select__title" data-default="январь 2021">январь 2021</div>
+                <div class="__select __select_month" data-state="">
+                    <div class="__select__title" data-default="январь 2021">январь</div>
                     <div class="__select__content">
                         <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect0" class="__select__label">январь 2021</label>
+                        <label for="singleSelect0" class="__select__label">январь</label>
                         <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" checked />
-                        <label for="singleSelect1" class="__select__label">январь 2021</label>
+                        <label for="singleSelect1" class="__select__label">январь</label>
                         <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect2" class="__select__label">февраль 2021</label>
+                        <label for="singleSelect2" class="__select__label">февраль</label>
                         <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect3" class="__select__label">март 2021</label>
+                        <label for="singleSelect3" class="__select__label">март</label>
                         <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect4" class="__select__label">апрель 2021</label>
+                        <label for="singleSelect4" class="__select__label">апрель</label>
                         <input id="singleSelect5" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect5" class="__select__label">май 2021</label>
+                        <label for="singleSelect5" class="__select__label">май</label>
                         <input id="singleSelect6" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect6" class="__select__label">июнь 2021</label>
+                        <label for="singleSelect6" class="__select__label">июнь</label>
                         <input id="singleSelect7" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect7" class="__select__label">июль 2021</label>
+                        <label for="singleSelect7" class="__select__label">июль</label>
                         <input id="singleSelect8" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect8" class="__select__label">август 2021</label>
+                        <label for="singleSelect8" class="__select__label">август</label>
                         <input id="singleSelect9" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect9" class="__select__label">сентябрь 2021</label>
+                        <label for="singleSelect9" class="__select__label">сентябрь</label>
                         <input id="singleSelect10" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect10" class="__select__label">октябрь 2021</label>
+                        <label for="singleSelect10" class="__select__label">октябрь</label>
                         <input id="singleSelect11" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect11" class="__select__label">ноябрь 2021</label>
+                        <label for="singleSelect11" class="__select__label">ноябрь</label>
                         <input id="singleSelect12" class="__select__input" type="radio" name="singleSelect" />
-                        <label for="singleSelect12" class="__select__label">декабрь 2021</label>
+                        <label for="singleSelect12" class="__select__label">декабрь</label>
                         
+                    </div>
+                </div>
+                <div class="__select __select_year" data-state="">
+                    <div class="__select__title" data-default="январь 2021">2022</div>
+                    <div class="__select__content">
+                        <input id="singleSelect0" class="__select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect0" class="__select__label">2022</label>
+                        <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" checked />
+                        <label for="singleSelect1" class="__select__label">2022</label>
+                        <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect2" class="__select__label">2021</label>
+                        <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect2" class="__select__label">2020</label>
+                        <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect3" class="__select__label">2019</label>
+                        <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect4" class="__select__label">2018</label>
+                        <input id="singleSelect5" class="__select__input" type="radio" name="singleSelect" />
+                        <label for="singleSelect5" class="__select__label">2017</label>
                     </div>
                 </div>
             </form>
@@ -1086,26 +1105,46 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script>
-       const selectSingle = document.querySelector('.__select');
-        const selectSingle_title = selectSingle.querySelector('.__select__title');
-        const selectSingle_labels = selectSingle.querySelectorAll('.__select__label');
+        const selectMonth = document.querySelector('.__select_month');
+        const selectMonth_title = selectMonth.querySelector('.__select__title');
+        const selectMonth_labels = selectMonth.querySelectorAll('.__select__label');
+
+        const selectYear = document.querySelector('.__select_year');
+        const selectYear_title = selectYear.querySelector('.__select__title');
+        const selectYear_labels = selectYear.querySelectorAll('.__select__label');
 
         // Toggle menu
-        selectSingle_title.addEventListener('click', () => {
-            if ('active' === selectSingle.getAttribute('data-state')) {
-                selectSingle.setAttribute('data-state', '');
+        selectMonth_title.addEventListener('click', () => {
+            if ('active' === selectMonth.getAttribute('data-state')) {
+                selectMonth.setAttribute('data-state', '');
             } else {
-                selectSingle.setAttribute('data-state', 'active');
+                selectMonth.setAttribute('data-state', 'active');
             }
         });
 
+        selectYear_title.addEventListener('click', () => {
+                if ('active' === selectYear.getAttribute('data-state')) {
+                    selectYear.setAttribute('data-state', '');
+                } else {
+                    selectYear.setAttribute('data-state', 'active');
+                }
+            });
+
         // Close when click to option
-        for (let i = 0; i < selectSingle_labels.length; i++) {
-            selectSingle_labels[i].addEventListener('click', (evt) => {
-                selectSingle_title.textContent = evt.target.textContent;
-                selectSingle.setAttribute('data-state', '');
+        for (let i = 0; i < selectMonth_labels.length; i++) {
+            selectMonth_labels[i].addEventListener('click', (evt) => {
+                selectMonth_title.textContent = evt.target.textContent;
+                selectMonth.setAttribute('data-state', '');
             });
         }
+
+        for (let i = 0; i < selectYear_labels.length; i++) {
+                selectYear_labels[i].addEventListener('click', (evt) => {
+                    selectYear_title.textContent = evt.target.textContent;
+                    selectYear.setAttribute('data-state', '');
+                });
+        }
+
     </script>
     <script src="./js/wow.min.js"></script>
     <script>

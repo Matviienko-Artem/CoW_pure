@@ -91,7 +91,7 @@
   left: 50%;
   min-width: 211px;
   height: max-content;
-  transform: translate(-50%, 25px);
+  transform: translate(-50%, 8px);
   z-index: 5;
 }
 #header .logo svg {
@@ -100,6 +100,11 @@
 
 #header.black .logo svg {
   fill: #000;
+}
+
+#header .logo svg path.cls-1 {
+  transform: rotateZ(180deg);
+  transform-origin: 32px;
 }
 
 #header a {
@@ -885,7 +890,7 @@
     width: calc(50% - 80px);
   }
   #header .logo {
-    transform: translate(-50%, 33px);
+    transform: translate(-50%, 20px);
     min-width: 150px;
   }
   #header .mobile-hidden {
