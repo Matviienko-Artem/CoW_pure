@@ -89,8 +89,8 @@
 #header .logo {
   position: absolute;
   left: 50%;
-  min-width: 211px;
-  height: max-content;
+  width: 211px;
+  /* height: max-content; */
   transform: translate(-50%, 8px);
   z-index: 5;
 }
@@ -895,7 +895,7 @@
   }
   #header .logo {
     transform: translate(-50%, 20px);
-    min-width: 150px;
+    width: 150px;
   }
   #header .mobile-hidden {
     display: none !important;
