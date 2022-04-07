@@ -64,6 +64,11 @@
   cursor: pointer;
 }
 
+.__select_year .__select__title{
+      font-size: 36px;
+      padding: 9px 70px 18px 0px;
+}
+
 .__select__title::before {
   content: "";
   position: absolute;
@@ -310,4 +315,7 @@
     font-size: 14px;
 
   }
+
+  .__select_year .__select__title {
+    font-size: 44px;}
 }
