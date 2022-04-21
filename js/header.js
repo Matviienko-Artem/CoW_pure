@@ -150,6 +150,12 @@ const closeCurrencyPopupBtn = document.querySelector(
 const toggleSearchBtn = document.getElementById("toggle_search_btn");
 const searchPopup = document.getElementById("search_popup");
 
+const toggleRegitrationBtn = document.querySelector(
+  "button.registration__complete"
+);
+const thanksPopup = document.getElementById("thanks_popup");
+const closeThanksPopupBtn = document.querySelector("#thanks_popup .close-btn");
+
 function togglePopup(btn, popup) {
   btn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -200,6 +206,12 @@ if (toggleCurrencyBtn) {
 if (closeCurrencyPopupBtn) {
   togglePopup(closeCurrencyPopupBtn, currencyModalPopup);
 }
+if (toggleRegitrationBtn) {
+  togglePopup(toggleRegitrationBtn, thanksPopup);
+}
+if (closeThanksPopupBtn) {
+  togglePopup(closeThanksPopupBtn, thanksPopup);
+}
 
 document.addEventListener("click", (e) => {
   if (e.target === modalWrapper) {
@@ -209,6 +221,7 @@ document.addEventListener("click", (e) => {
     forgotModalPopup.classList.remove("open");
     currencyModalPopup.classList.remove("open");
     searchPopup.classList.remove("open");
+    thanksPopup.classList.remove("open");
   }
 });
 

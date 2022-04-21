@@ -273,7 +273,8 @@
   color: #fff;
   background-color: #332e4c;
 }
-.modal-wrapper #currency_popup {
+.modal-wrapper #currency_popup,
+.modal-wrapper #thanks_popup {
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
@@ -282,7 +283,8 @@
 .modal-wrapper #personal_popup.open,
 .modal-wrapper #forgot_popup.open,
 .modal-wrapper #currency_popup.open,
-.modal-wrapper #search_popup.open {
+.modal-wrapper #search_popup.open,
+.modal-wrapper #thanks_popup.open {
   display: block;
 }
 
@@ -506,6 +508,10 @@
 .popup .currency-btn:hover {
   background-color: #fff;
   color: #332e4c;
+}
+
+.modal-wrapper #thanks_popup .currency-btn {
+  margin-bottom: 0;
 }
 
 #forgot_popup.popup .popup-footing {
